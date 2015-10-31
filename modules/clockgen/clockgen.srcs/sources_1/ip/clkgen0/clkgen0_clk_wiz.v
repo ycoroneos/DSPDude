@@ -55,8 +55,7 @@
 //  Output     Output      Phase    Duty Cycle   Pk-to-Pk     Phase
 //   Clock     Freq (MHz)  (degrees)    (%)     Jitter (ps)  Error (ps)
 //----------------------------------------------------------------------------
-// CLK_OUT1____24.571______0.000______50.0______364.325____308.842
-// CLK_OUT2_____9.247______0.000______50.0______427.908____308.842
+// CLK_OUT1____24.576______0.000______50.0______144.906____134.075
 //
 //----------------------------------------------------------------------------
 // Input Clock   Freq (MHz)    Input Jitter (UI)
@@ -70,7 +69,6 @@ module clkgen0_clk_wiz
   input         clk_100mhz,
   // Clock out ports
   output        mclk,
-  output        bclk,
   // Status and control signals
   input         reset
  );
@@ -96,6 +94,7 @@ module clkgen0_clk_wiz
   wire        clkfbout_clkgen0;
   wire        clkfbout_buf_clkgen0;
   wire        clkfboutb_unused;
+   wire clkout1_unused;
    wire clkout2_unused;
    wire clkout3_unused;
    wire clkout4_unused;
@@ -108,22 +107,19 @@ module clkgen0_clk_wiz
   PLLE2_ADV
   #(.BANDWIDTH            ("OPTIMIZED"),
     .COMPENSATION         ("ZHOLD"),
-    .DIVCLK_DIVIDE        (5),
-    .CLKFBOUT_MULT        (43),
+    .DIVCLK_DIVIDE        (2),
+    .CLKFBOUT_MULT        (29),
     .CLKFBOUT_PHASE       (0.000),
-    .CLKOUT0_DIVIDE       (35),
+    .CLKOUT0_DIVIDE       (59),
     .CLKOUT0_PHASE        (0.000),
     .CLKOUT0_DUTY_CYCLE   (0.500),
-    .CLKOUT1_DIVIDE       (93),
-    .CLKOUT1_PHASE        (0.000),
-    .CLKOUT1_DUTY_CYCLE   (0.500),
     .CLKIN1_PERIOD        (10.0))
   plle2_adv_inst
     // Output clocks
    (
     .CLKFBOUT            (clkfbout_clkgen0),
     .CLKOUT0             (mclk_clkgen0),
-    .CLKOUT1             (bclk_clkgen0),
+    .CLKOUT1             (clkout1_unused),
     .CLKOUT2             (clkout2_unused),
     .CLKOUT3             (clkout3_unused),
     .CLKOUT4             (clkout4_unused),
@@ -163,10 +159,6 @@ module clkgen0_clk_wiz
    (.O   (mclk),
     .I   (mclk_clkgen0));
 
-
-  BUFG clkout2_buf
-   (.O   (bclk),
-    .I   (bclk_clkgen0));
 
 
 

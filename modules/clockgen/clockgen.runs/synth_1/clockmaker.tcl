@@ -16,6 +16,10 @@ set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 add_files -quiet /home/yanni/DSPDude/modules/clockgen/clockgen.runs/clkgen0_synth_1/clkgen0.dcp
 set_property used_in_implementation false [get_files /home/yanni/DSPDude/modules/clockgen/clockgen.runs/clkgen0_synth_1/clkgen0.dcp]
+add_files -quiet /home/yanni/DSPDude/modules/clockgen/clockgen.runs/clkgen1_synth_1/clkgen1.dcp
+set_property used_in_implementation false [get_files /home/yanni/DSPDude/modules/clockgen/clockgen.runs/clkgen1_synth_1/clkgen1.dcp]
+add_files -quiet /home/yanni/DSPDude/modules/clockgen/clockgen.runs/clkgen2_synth_1/clkgen2.dcp
+set_property used_in_implementation false [get_files /home/yanni/DSPDude/modules/clockgen/clockgen.runs/clkgen2_synth_1/clkgen2.dcp]
 read_verilog -library xil_defaultlib {
   /home/yanni/DSPDude/modules/clockgen/clockgen.srcs/sources_1/new/slowdivider.v
   /home/yanni/DSPDude/modules/clockgen/clockgen.srcs/sources_1/new/clockmaker.v

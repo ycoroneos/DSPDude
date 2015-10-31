@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Sat Oct 31 14:53:34 2015
+# Process ID: 23555
+# Log file: /home/yanni/DSPDude/modules/clockgen/clockgen.runs/clkgen1_synth_1/clkgen1.vds
+# Journal file: /home/yanni/DSPDude/modules/clockgen/clockgen.runs/clkgen1_synth_1/vivado.jou
+#-----------------------------------------------------------
+source clkgen1.tcl -notrace

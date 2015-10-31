@@ -21,7 +21,7 @@
 
 
 module slowdivider(
-input wire clk100mhz, reset,
+input wire inclk, reset,
 output wire newclk
     );
     parameter LOGLENGTH=31;
@@ -29,7 +29,7 @@ output wire newclk
     reg [LOGLENGTH:0] count=0;
     reg output_reg=0;
     assign newclk=output_reg;
-    always @(posedge clk100mhz)
+    always @(posedge inclk)
     begin
     if (reset)
         begin

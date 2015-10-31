@@ -16,6 +16,7 @@ set_property parent.project_path /home/yanni/DSPDude/modules/clockgen/clockgen.x
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 read_ip /home/yanni/DSPDude/modules/clockgen/clockgen.srcs/sources_1/ip/clkgen0/clkgen0.xci
+set_property used_in_implementation false [get_files -all /home/yanni/DSPDude/modules/clockgen/clockgen.srcs/sources_1/ip/clkgen0/clkgen0.dcp]
 set_property is_locked true [get_files /home/yanni/DSPDude/modules/clockgen/clockgen.srcs/sources_1/ip/clkgen0/clkgen0.xci]
 
 read_xdc dont_touch.xdc

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-3" LaunchTime="1446275859">
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-3" LaunchTime="1446317939">
   <File Type="VDS-TIMING-PB" Name="clockmaker_timing_summary_synth.pb"/>
   <File Type="VDS-TIMINGSUMMARY" Name="clockmaker_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="clockmaker.dcp"/>
@@ -53,5 +53,7 @@
     </StratHandle>
     <Step Id="synth_design"/>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="clkgen2"/>
   <BlockFileSet Type="BlockSrcs" Name="clkgen0"/>
+  <BlockFileSet Type="BlockSrcs" Name="clkgen1"/>
 </GenRun>
