@@ -3,7 +3,7 @@ datasheet pg.4:
   fs(max) or LRCLK is 216KHz, we need 192KHz for our sampling rate
   pg.20 has a table
   MCLK=128*fs=24.5760MHz for quad mode
-  BCLK=192KHz*24bits = 4.608MHz
+  BCLK=192KHz*48 = 9.216MHz
   Master CLK must be synchronous with LRCLK
   VDD is 3.3v
   192KHz PCM over i2s
