@@ -1,6 +1,10 @@
 datasheet pg.4:
   master clock freq=[7.7MHz,41.472MHz]
-  fs(max) is 216KHz
+  fs(max) or LRCLK is 216KHz, we need 192KHz for our sampling rate
+  pg.20 has a table
+  MCLK=128*fs=24.5760MHz for quad mode
+  BCLK=192KHz*24bits = 4.608MHz
+  Master CLK must be synchronous with LRCLK
   VDD is 3.3v
   192KHz PCM over i2s
   Pin 8 is CSN => chip select in serial mode
