@@ -1,5 +1,6 @@
 # DSPDude
-6.111 final project
+##6.111 final project
+
 People: Yanni Coroneos, Valentina Chamorro
 
 DSPDude is a reprogrammable audio pre-amp that can be daisy-chained with
