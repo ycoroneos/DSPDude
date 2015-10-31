@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------
 | Tool Version      : Vivado v.2015.2 (lin64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-| Date              : Sat Oct 31 16:44:49 2015
+| Date              : Sat Oct 31 17:09:38 2015
 | Host              : asbestos running 64-bit Gentoo Base System release 2.2
 | Command           : report_clock_utilization -file nexys4_clock_utilization_routed.rpt
 | Design            : nexys4
@@ -30,7 +30,7 @@ Table of Contents
 +-------+------+-----------+-----------+
 | Type  | Used | Available | Num Fixed |
 +-------+------+-----------+-----------+
-| BUFG  |    2 |        32 |         0 |
+| BUFG  |    3 |        32 |         0 |
 | BUFH  |    0 |        96 |         0 |
 | BUFIO |    0 |        24 |         0 |
 | MMCM  |    0 |         6 |         0 |
@@ -48,8 +48,9 @@ Table of Contents
 +-------+------------------------------------+---------------------------------------------+------+-------+-------+
 | Index | BUFG Cell                          | Net Name                                    | BELs | Sites | Fixed |
 +-------+------------------------------------+---------------------------------------------+------+-------+-------+
-|     1 | clocks/someclocks/inst/clkf_buf    | clocks/someclocks/inst/clkfbout_buf_clkgen0 |    1 |     1 |    no |
-|     2 | clocks/someclocks/inst/clkout1_buf | clocks/someclocks/inst/mclk                 |   24 |     7 |    no |
+|     1 | clocks/someclocks/inst/clkout2_buf | clocks/someclocks/inst/bclk                 |    1 |     1 |    no |
+|     2 | clocks/someclocks/inst/clkf_buf    | clocks/someclocks/inst/clkfbout_buf_clkgen0 |    1 |     1 |    no |
+|     3 | clocks/someclocks/inst/clkout1_buf | clocks/someclocks/inst/mclk                 |   23 |     6 |    no |
 +-------+------------------------------------+---------------------------------------------+------+-------+-------+
 
 
@@ -58,8 +59,9 @@ Table of Contents
 +-------+---------------------------------------+-----------------------------------------+------+-------+-------+
 | Index | PLL Cell                              | Net Name                                | BELs | Sites | Fixed |
 +-------+---------------------------------------+-----------------------------------------+------+-------+-------+
-|     1 | clocks/someclocks/inst/plle2_adv_inst | clocks/someclocks/inst/clkfbout_clkgen0 |    1 |     1 |    no |
-|     2 | clocks/someclocks/inst/plle2_adv_inst | clocks/someclocks/inst/mclk_clkgen0     |    1 |     1 |    no |
+|     1 | clocks/someclocks/inst/plle2_adv_inst | clocks/someclocks/inst/bclk_clkgen0     |    1 |     1 |    no |
+|     2 | clocks/someclocks/inst/plle2_adv_inst | clocks/someclocks/inst/clkfbout_clkgen0 |    1 |     1 |    no |
+|     3 | clocks/someclocks/inst/plle2_adv_inst | clocks/someclocks/inst/mclk_clkgen0     |    1 |     1 |    no |
 +-------+---------------------------------------+-----------------------------------------+------+-------+-------+
 
 
@@ -87,7 +89,7 @@ Table of Contents
 | X1Y0              |    0 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     5 |    0 |     0 |    0 |     0 |    0 |     0 |    0 | 12000 |    0 |  2200 |    0 |    40 |    0 |    20 |    0 |    40 |
 | X0Y1              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 | 16000 |    0 |  2400 |    0 |    20 |    0 |    10 |    0 |    20 |
 | X1Y1              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 | 15200 |    0 |  2600 |    0 |    60 |    0 |    30 |    0 |    40 |
-| X0Y2              |    1 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |   22 | 16000 |    0 |  2400 |    0 |    20 |    0 |    10 |    0 |    20 |
+| X0Y2              |    2 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |   22 | 16000 |    0 |  2400 |    0 |    20 |    0 |    10 |    0 |    20 |
 | X1Y2              |    1 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    1 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 | 15200 |    0 |  2600 |    0 |    60 |    0 |    30 |    0 |    40 |
 | X0Y3              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 | 20800 |    0 |  2400 |    0 |    20 |    0 |    10 |    0 |    20 |
 | X1Y3              |    0 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     5 |    0 |     1 |    0 |     0 |    0 |     0 |    0 | 10800 |    0 |  2000 |    0 |    30 |    0 |    15 |    0 |    40 |
@@ -117,7 +119,8 @@ Table of Contents
 
 
 # Location of BUFG Primitives 
-set_property LOC BUFGCTRL_X0Y17 [get_cells clocks/someclocks/inst/clkf_buf]
+set_property LOC BUFGCTRL_X0Y17 [get_cells clocks/someclocks/inst/clkout2_buf]
+set_property LOC BUFGCTRL_X0Y18 [get_cells clocks/someclocks/inst/clkf_buf]
 set_property LOC BUFGCTRL_X0Y16 [get_cells clocks/someclocks/inst/clkout1_buf]
 
 # Location of IO Clock Primitives
@@ -143,6 +146,6 @@ set_property LOC IOB_X1Y126 [get_ports CLK100MHZ]
 # Clock net "clocks/someclocks/inst/mclk" driven by instance "clocks/someclocks/inst/clkout1_buf" located at site "BUFGCTRL_X0Y16"
 #startgroup
 create_pblock {CLKAG_clocks/someclocks/inst/mclk}
-add_cells_to_pblock [get_pblocks  {CLKAG_clocks/someclocks/inst/mclk}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL && NAME!=JA_OBUF[3]_inst && NAME!=JA_OBUF[1]_inst} -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="clocks/someclocks/inst/mclk"}]]]
+add_cells_to_pblock [get_pblocks  {CLKAG_clocks/someclocks/inst/mclk}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL && NAME!=JA_OBUF[1]_inst} -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="clocks/someclocks/inst/mclk"}]]]
 resize_pblock [get_pblocks {CLKAG_clocks/someclocks/inst/mclk}] -add {CLOCKREGION_X0Y2:CLOCKREGION_X0Y2}
 #endgroup

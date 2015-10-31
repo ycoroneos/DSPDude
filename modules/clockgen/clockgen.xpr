@@ -83,6 +83,11 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
+        <CompFileExtendedInfo CompFileName="clkgen0.xci" FileRelPathName="clkgen0_stub.v"/>
+        <CompFileExtendedInfo CompFileName="clkgen0.xci" FileRelPathName="clkgen0.dcp"/>
+        <CompFileExtendedInfo CompFileName="clkgen0.xci" FileRelPathName="clkgen0_funcsim.vhdl"/>
+        <CompFileExtendedInfo CompFileName="clkgen0.xci" FileRelPathName="clkgen0_funcsim.v"/>
+        <CompFileExtendedInfo CompFileName="clkgen0.xci" FileRelPathName="clkgen0_stub.vhdl"/>
         <CompFileExtendedInfo CompFileName="clkgen0.xci" FileRelPathName="clkgen0.veo"/>
         <CompFileExtendedInfo CompFileName="clkgen0.xci" FileRelPathName="clkgen0_board.xdc"/>
         <CompFileExtendedInfo CompFileName="clkgen0.xci" FileRelPathName="clkgen0.v"/>
@@ -91,11 +96,6 @@
         <CompFileExtendedInfo CompFileName="clkgen0.xci" FileRelPathName="clkgen0.xdc"/>
         <CompFileExtendedInfo CompFileName="clkgen0.xci" FileRelPathName="doc/clk_wiz_v5_1_changelog.txt"/>
         <CompFileExtendedInfo CompFileName="clkgen0.xci" FileRelPathName="clkgen0.xml"/>
-        <CompFileExtendedInfo CompFileName="clkgen0.xci" FileRelPathName="clkgen0_funcsim.vhdl"/>
-        <CompFileExtendedInfo CompFileName="clkgen0.xci" FileRelPathName="clkgen0_funcsim.v"/>
-        <CompFileExtendedInfo CompFileName="clkgen0.xci" FileRelPathName="clkgen0_stub.vhdl"/>
-        <CompFileExtendedInfo CompFileName="clkgen0.xci" FileRelPathName="clkgen0_stub.v"/>
-        <CompFileExtendedInfo CompFileName="clkgen0.xci" FileRelPathName="clkgen0.dcp"/>
       </File>
       <Config>
         <Option Name="TopModule" Val="clkgen0"/>

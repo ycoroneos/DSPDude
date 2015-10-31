@@ -2,7 +2,7 @@
 <BODY TEXT='#000000' BGCOLOR='#FFFFFF' LINK='#0000EE' VLINK='#551A8B' ALINK='#FF0000'><H3>Device Usage Page (usage_statistics_webtalk.html)</H3>This HTML page displays the device usage statistics that will be sent to Xilinx.<BR>To see the actual file transmitted to Xilinx, please click <A HREF="./usage_statistics_webtalk.xml">here</A>.<BR><BR><HR>
  <TABLE BORDER='1' CELLSPACING='0' WIDTH='100%'>
   <TR ALIGN='CENTER' BGCOLOR='#A7BFDE'><TD COLSPAN='4'><B>software_version_and_target_device</B></TD></TR>
-<TR ALIGN='LEFT'>  <TD BGCOLOR='#DBE5F1'><B>date_generated</B></TD><TD>Sat Oct 31 16:45:02 2015</TD>
+<TR ALIGN='LEFT'>  <TD BGCOLOR='#DBE5F1'><B>date_generated</B></TD><TD>Sat Oct 31 17:09:51 2015</TD>
   <TD BGCOLOR='#DBE5F1'><B>product_version</B></TD><TD>Vivado v2015.2 (64-bit)</TD>
 </TR><TR ALIGN='LEFT'>  <TD BGCOLOR='#DBE5F1'><B>build_version</B></TD><TD>1266856</TD>
   <TD BGCOLOR='#DBE5F1'><B>os_platform</B></TD><TD>LIN64</TD>
@@ -52,7 +52,7 @@
    <TR><TD>
    <TABLE BORDER='1' CELLSPACING='0' WIDTH='100%'>
     <TR ALIGN='CENTER' BGCOLOR='#DBE5F1'><TD COLSPAN='4'><B>pre_unisim_transformation</B></TD></TR>
-<TR ALIGN='LEFT'>    <TD>bufg=2</TD>
+<TR ALIGN='LEFT'>    <TD>bufg=3</TD>
     <TD>carry4=3</TD>
     <TD>fdre=22</TD>
     <TD>gnd=2</TD>
@@ -71,7 +71,7 @@
    <TR><TD>
    <TABLE BORDER='1' CELLSPACING='0' WIDTH='100%'>
     <TR ALIGN='CENTER' BGCOLOR='#DBE5F1'><TD COLSPAN='4'><B>post_unisim_transformation</B></TD></TR>
-<TR ALIGN='LEFT'>    <TD>bufg=2</TD>
+<TR ALIGN='LEFT'>    <TD>bufg=3</TD>
     <TD>carry4=3</TD>
     <TD>fdre=22</TD>
     <TD>gnd=2</TD>
@@ -101,18 +101,18 @@
     <TD>dsp=0</TD>
     <TD>iob=6</TD>
     <TD>bufg=0</TD>
-</TR><TR ALIGN='LEFT'>    <TD>global_clocks=2</TD>
+</TR><TR ALIGN='LEFT'>    <TD>global_clocks=3</TD>
     <TD>pll=1</TD>
     <TD>bufr=0</TD>
-    <TD>nets=80</TD>
-</TR><TR ALIGN='LEFT'>    <TD>movable_instances=67</TD>
-    <TD>pins=390</TD>
+    <TD>nets=82</TD>
+</TR><TR ALIGN='LEFT'>    <TD>movable_instances=68</TD>
+    <TD>pins=392</TD>
     <TD>bogomips=7382</TD>
     <TD>effort=2</TD>
 </TR><TR ALIGN='LEFT'>    <TD>threads=6</TD>
     <TD>placer_timing_driven=1</TD>
     <TD>timing_constraints_exist=1</TD>
-    <TD>placer_runtime=1.010000</TD>
+    <TD>placer_runtime=0.830000</TD>
 </TR>   </TABLE>
    </TD></TR>
   </TABLE><BR>
@@ -124,7 +124,7 @@
 <TR ALIGN='LEFT'>    <TD>iptotal=1</TD>
     <TD>component_name=clkgen0</TD>
     <TD>use_phase_alignment=true</TD>
-    <TD>use_min_o_jitter=true</TD>
+    <TD>use_min_o_jitter=false</TD>
 </TR><TR ALIGN='LEFT'>    <TD>use_max_i_jitter=false</TD>
     <TD>use_dyn_phase_shift=false</TD>
     <TD>use_inclk_switchover=false</TD>
@@ -132,7 +132,7 @@
 </TR><TR ALIGN='LEFT'>    <TD>enable_axi=0</TD>
     <TD>feedback_source=FDBK_AUTO</TD>
     <TD>primitive=PLL</TD>
-    <TD>num_out_clk=1</TD>
+    <TD>num_out_clk=2</TD>
 </TR><TR ALIGN='LEFT'>    <TD>clkin1_period=10.0</TD>
     <TD>clkin2_period=10.0</TD>
     <TD>use_power_down=false</TD>
@@ -179,7 +179,7 @@
     <TD>process=typical</TD>
     <TD>simulation_file=None</TD>
 </TR><TR ALIGN='LEFT'>    <TD>netlist_net_matched=NA</TD>
-    <TD>pct_clock_constrained=0.200000</TD>
+    <TD>pct_clock_constrained=0.180000</TD>
     <TD>pct_inputs_defined=50</TD>
     <TD>user_junc_temp=26.1 (C)</TD>
 </TR><TR ALIGN='LEFT'>    <TD>ambient_temp=25.0 (C)</TD>
@@ -208,29 +208,29 @@
     <TD>signal_rate=False</TD>
 </TR><TR ALIGN='LEFT'>    <TD>static_prob=False</TD>
     <TD>read_saif=False</TD>
-    <TD>on-chip_power=0.238019</TD>
-    <TD>dynamic=0.140511</TD>
+    <TD>on-chip_power=0.232055</TD>
+    <TD>dynamic=0.134566</TD>
 </TR><TR ALIGN='LEFT'>    <TD>effective_thetaja=4.6</TD>
     <TD>thetasa=4.6 (C/W)</TD>
     <TD>thetajb=5.7 (C/W)</TD>
     <TD>off-chip_power=0.000000</TD>
-</TR><TR ALIGN='LEFT'>    <TD>clocks=0.002531</TD>
-    <TD>logic=0.000051</TD>
-    <TD>signals=0.000037</TD>
-    <TD>pll=0.134271</TD>
-</TR><TR ALIGN='LEFT'>    <TD>i/o=0.005800</TD>
-    <TD>devstatic=0.097508</TD>
+</TR><TR ALIGN='LEFT'>    <TD>clocks=0.003289</TD>
+    <TD>logic=0.000050</TD>
+    <TD>signals=0.000040</TD>
+    <TD>pll=0.129701</TD>
+</TR><TR ALIGN='LEFT'>    <TD>i/o=0.004367</TD>
+    <TD>devstatic=0.097489</TD>
     <TD>vccint_voltage=1.000000</TD>
-    <TD>vccint_total_current=0.031164</TD>
-</TR><TR ALIGN='LEFT'>    <TD>vccint_dynamic_current=0.015813</TD>
-    <TD>vccint_static_current=0.015350</TD>
+    <TD>vccint_total_current=0.028200</TD>
+</TR><TR ALIGN='LEFT'>    <TD>vccint_dynamic_current=0.012866</TD>
+    <TD>vccint_static_current=0.015334</TD>
     <TD>vccaux_voltage=1.800000</TD>
-    <TD>vccaux_total_current=0.084470</TD>
-</TR><TR ALIGN='LEFT'>    <TD>vccaux_dynamic_current=0.066300</TD>
-    <TD>vccaux_static_current=0.018170</TD>
+    <TD>vccaux_total_current=0.083547</TD>
+</TR><TR ALIGN='LEFT'>    <TD>vccaux_dynamic_current=0.065378</TD>
+    <TD>vccaux_static_current=0.018169</TD>
     <TD>vcco33_voltage=3.300000</TD>
-    <TD>vcco33_total_current=0.005624</TD>
-</TR><TR ALIGN='LEFT'>    <TD>vcco33_dynamic_current=0.001624</TD>
+    <TD>vcco33_total_current=0.005218</TD>
+</TR><TR ALIGN='LEFT'>    <TD>vcco33_dynamic_current=0.001218</TD>
     <TD>vcco33_static_current=0.004000</TD>
     <TD>vcco25_voltage=2.500000</TD>
     <TD>vcco25_total_current=0.000000</TD>
@@ -387,10 +387,10 @@
    <TR><TD>
    <TABLE BORDER='1' CELLSPACING='0' WIDTH='100%'>
     <TR ALIGN='CENTER' BGCOLOR='#DBE5F1'><TD COLSPAN='4'><B>clocking</B></TD></TR>
-<TR ALIGN='LEFT'>    <TD>bufgctrl_used=2</TD>
+<TR ALIGN='LEFT'>    <TD>bufgctrl_used=3</TD>
     <TD>bufgctrl_fixed=0</TD>
     <TD>bufgctrl_available=32</TD>
-    <TD>bufgctrl_util_percentage=6.25</TD>
+    <TD>bufgctrl_util_percentage=9.38</TD>
 </TR><TR ALIGN='LEFT'>    <TD>bufio_used=0</TD>
     <TD>bufio_fixed=0</TD>
     <TD>bufio_available=24</TD>
@@ -473,10 +473,10 @@
     <TD>lut6_functional_category=LUT</TD>
     <TD>carry4_used=3</TD>
     <TD>carry4_functional_category=CarryLogic</TD>
-</TR><TR ALIGN='LEFT'>    <TD>ibuf_used=2</TD>
-    <TD>ibuf_functional_category=IO</TD>
-    <TD>bufg_used=2</TD>
+</TR><TR ALIGN='LEFT'>    <TD>bufg_used=3</TD>
     <TD>bufg_functional_category=Clock</TD>
+    <TD>ibuf_used=2</TD>
+    <TD>ibuf_functional_category=IO</TD>
 </TR><TR ALIGN='LEFT'>    <TD>plle2_adv_used=1</TD>
     <TD>plle2_adv_functional_category=Clock</TD>
     <TD>lut3_used=1</TD>
@@ -488,43 +488,43 @@
    <TR><TD>
    <TABLE BORDER='1' CELLSPACING='0' WIDTH='100%'>
     <TR ALIGN='CENTER' BGCOLOR='#DBE5F1'><TD COLSPAN='4'><B>io_standard</B></TD></TR>
-<TR ALIGN='LEFT'>    <TD>ppds_25=0</TD>
-    <TD>sstl135=0</TD>
-    <TD>mini_lvds_25=0</TD>
+<TR ALIGN='LEFT'>    <TD>sstl135=0</TD>
     <TD>sstl15_r=0</TD>
-</TR><TR ALIGN='LEFT'>    <TD>tmds_33=0</TD>
     <TD>sstl15=0</TD>
-    <TD>rsds_25=0</TD>
     <TD>sstl18_ii=0</TD>
-</TR><TR ALIGN='LEFT'>    <TD>lvds_25=0</TD>
-    <TD>sstl18_i=0</TD>
-    <TD>blvds_25=0</TD>
+</TR><TR ALIGN='LEFT'>    <TD>sstl18_i=0</TD>
     <TD>hstl_ii=0</TD>
-</TR><TR ALIGN='LEFT'>    <TD>diff_hsul_12=0</TD>
+    <TD>diff_hsul_12=0</TD>
     <TD>hsul_12=0</TD>
-    <TD>diff_hstl_i_18=0</TD>
-    <TD>lvcmos33=1</TD>
-</TR><TR ALIGN='LEFT'>    <TD>hstl_i=0</TD>
+</TR><TR ALIGN='LEFT'>    <TD>lvcmos33=1</TD>
+    <TD>hstl_i=0</TD>
     <TD>lvttl=0</TD>
     <TD>lvcmos15=0</TD>
-    <TD>diff_hstl_i=0</TD>
-</TR><TR ALIGN='LEFT'>    <TD>hstl_i_18=0</TD>
+</TR><TR ALIGN='LEFT'>    <TD>diff_hstl_i=0</TD>
+    <TD>hstl_i_18=0</TD>
     <TD>lvcmos25=0</TD>
     <TD>hstl_ii_18=0</TD>
-    <TD>lvcmos18=0</TD>
-</TR><TR ALIGN='LEFT'>    <TD>lvcmos12=0</TD>
+</TR><TR ALIGN='LEFT'>    <TD>lvcmos18=0</TD>
+    <TD>lvcmos12=0</TD>
     <TD>diff_hstl_ii=0</TD>
     <TD>sstl135_r=0</TD>
-    <TD>diff_hstl_ii_18=0</TD>
-</TR><TR ALIGN='LEFT'>    <TD>diff_sstl18_i=0</TD>
+</TR><TR ALIGN='LEFT'>    <TD>blvds_25=0</TD>
+    <TD>diff_sstl18_i=0</TD>
+    <TD>lvds_25=0</TD>
     <TD>diff_sstl18_ii=0</TD>
-    <TD>diff_sstl15=0</TD>
-    <TD>diff_sstl15_r=0</TD>
-</TR><TR ALIGN='LEFT'>    <TD>diff_sstl135=0</TD>
+</TR><TR ALIGN='LEFT'>    <TD>ppds_25=0</TD>
     <TD>diff_sstl135_r=0</TD>
     <TD>pci33_3=0</TD>
-    <TD>mobile_ddr=0</TD>
-</TR><TR ALIGN='LEFT'>    <TD>diff_mobile_ddr=0</TD>
+    <TD>diff_hstl_i_18=0</TD>
+</TR><TR ALIGN='LEFT'>    <TD>mobile_ddr=0</TD>
+    <TD>diff_hstl_ii_18=0</TD>
+    <TD>diff_mobile_ddr=0</TD>
+    <TD>diff_sstl15=0</TD>
+</TR><TR ALIGN='LEFT'>    <TD>rsds_25=0</TD>
+    <TD>diff_sstl15_r=0</TD>
+    <TD>tmds_33=0</TD>
+    <TD>diff_sstl135=0</TD>
+</TR><TR ALIGN='LEFT'>    <TD>mini_lvds_25=0</TD>
 </TR>   </TABLE>
    </TD></TR>
   </TABLE><BR>
@@ -541,12 +541,12 @@
     <TD>dsp=0</TD>
     <TD>iob=6</TD>
     <TD>bufg=0</TD>
-</TR><TR ALIGN='LEFT'>    <TD>global_clocks=2</TD>
+</TR><TR ALIGN='LEFT'>    <TD>global_clocks=3</TD>
     <TD>pll=1</TD>
     <TD>bufr=0</TD>
-    <TD>nets=80</TD>
-</TR><TR ALIGN='LEFT'>    <TD>movable_instances=67</TD>
-    <TD>pins=390</TD>
+    <TD>nets=82</TD>
+</TR><TR ALIGN='LEFT'>    <TD>movable_instances=68</TD>
+    <TD>pins=392</TD>
     <TD>bogomips=7382</TD>
     <TD>high_fanout_nets=0</TD>
 </TR><TR ALIGN='LEFT'>    <TD>effort=2</TD>
@@ -554,9 +554,9 @@
     <TD>router_timing_driven=1</TD>
     <TD>timing_constraints_exist=1</TD>
 </TR><TR ALIGN='LEFT'>    <TD>congestion_level=0</TD>
-    <TD>estimated_expansions=32538</TD>
-    <TD>actual_expansions=218985</TD>
-    <TD>router_runtime=15.430000</TD>
+    <TD>estimated_expansions=31824</TD>
+    <TD>actual_expansions=378614</TD>
+    <TD>router_runtime=15.390000</TD>
 </TR>   </TABLE>
    </TD></TR>
   </TABLE><BR>
@@ -593,9 +593,9 @@
    <TR><TD>
    <TABLE BORDER='1' CELLSPACING='0' WIDTH='100%'>
     <TR ALIGN='CENTER' BGCOLOR='#DBE5F1'><TD COLSPAN='4'><B>usage</B></TD></TR>
-<TR ALIGN='LEFT'>    <TD>elapsed=00:00:14s</TD>
-    <TD>memory_peak=1282.422MB</TD>
-    <TD>memory_gain=374.734MB</TD>
+<TR ALIGN='LEFT'>    <TD>elapsed=00:00:15s</TD>
+    <TD>memory_peak=1288.426MB</TD>
+    <TD>memory_gain=380.734MB</TD>
     <TD>hls_ip=0</TD>
 </TR>   </TABLE>
    </TD></TR>

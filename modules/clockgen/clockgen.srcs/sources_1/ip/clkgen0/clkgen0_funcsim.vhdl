@@ -1,7 +1,7 @@
 -- Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2015.2 (lin64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
--- Date        : Sat Oct 31 16:42:09 2015
+-- Date        : Sat Oct 31 17:07:15 2015
 -- Host        : asbestos running 64-bit Gentoo Base System release 2.2
 -- Command     : write_vhdl -force -mode funcsim
 --               /home/yanni/DSPDude/modules/clockgen/clockgen.srcs/sources_1/ip/clkgen0/clkgen0_funcsim.vhdl
@@ -18,6 +18,7 @@ entity clkgen0_clkgen0_clk_wiz is
   port (
     clk_100mhz : in STD_LOGIC;
     mclk : out STD_LOGIC;
+    bclk : out STD_LOGIC;
     reset : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
@@ -25,11 +26,11 @@ entity clkgen0_clkgen0_clk_wiz is
 end clkgen0_clkgen0_clk_wiz;
 
 architecture STRUCTURE of clkgen0_clkgen0_clk_wiz is
+  signal bclk_clkgen0 : STD_LOGIC;
   signal clk_100mhz_clkgen0 : STD_LOGIC;
   signal clkfbout_buf_clkgen0 : STD_LOGIC;
   signal clkfbout_clkgen0 : STD_LOGIC;
   signal mclk_clkgen0 : STD_LOGIC;
-  signal NLW_plle2_adv_inst_CLKOUT1_UNCONNECTED : STD_LOGIC;
   signal NLW_plle2_adv_inst_CLKOUT2_UNCONNECTED : STD_LOGIC;
   signal NLW_plle2_adv_inst_CLKOUT3_UNCONNECTED : STD_LOGIC;
   signal NLW_plle2_adv_inst_CLKOUT4_UNCONNECTED : STD_LOGIC;
@@ -47,6 +48,7 @@ architecture STRUCTURE of clkgen0_clkgen0_clk_wiz is
   attribute IFD_DELAY_VALUE : string;
   attribute IFD_DELAY_VALUE of clkin1_ibufg : label is "AUTO";
   attribute BOX_TYPE of clkout1_buf : label is "PRIMITIVE";
+  attribute BOX_TYPE of clkout2_buf : label is "PRIMITIVE";
   attribute BOX_TYPE of plle2_adv_inst : label is "PRIMITIVE";
 begin
 clkf_buf: unisim.vcomponents.BUFG
@@ -67,9 +69,14 @@ clkout1_buf: unisim.vcomponents.BUFG
       I => mclk_clkgen0,
       O => mclk
     );
+clkout2_buf: unisim.vcomponents.BUFG
+     port map (
+      I => bclk_clkgen0,
+      O => bclk
+    );
 plle2_adv_inst: unisim.vcomponents.PLLE2_ADV
     generic map(
-      BANDWIDTH => "HIGH",
+      BANDWIDTH => "OPTIMIZED",
       CLKFBOUT_MULT => 29,
       CLKFBOUT_PHASE => 0.000000,
       CLKIN1_PERIOD => 10.000000,
@@ -77,7 +84,7 @@ plle2_adv_inst: unisim.vcomponents.PLLE2_ADV
       CLKOUT0_DIVIDE => 59,
       CLKOUT0_DUTY_CYCLE => 0.500000,
       CLKOUT0_PHASE => 0.000000,
-      CLKOUT1_DIVIDE => 1,
+      CLKOUT1_DIVIDE => 118,
       CLKOUT1_DUTY_CYCLE => 0.500000,
       CLKOUT1_PHASE => 0.000000,
       CLKOUT2_DIVIDE => 1,
@@ -108,7 +115,7 @@ plle2_adv_inst: unisim.vcomponents.PLLE2_ADV
       CLKIN2 => '0',
       CLKINSEL => '1',
       CLKOUT0 => mclk_clkgen0,
-      CLKOUT1 => NLW_plle2_adv_inst_CLKOUT1_UNCONNECTED,
+      CLKOUT1 => bclk_clkgen0,
       CLKOUT2 => NLW_plle2_adv_inst_CLKOUT2_UNCONNECTED,
       CLKOUT3 => NLW_plle2_adv_inst_CLKOUT3_UNCONNECTED,
       CLKOUT4 => NLW_plle2_adv_inst_CLKOUT4_UNCONNECTED,
@@ -154,18 +161,20 @@ entity clkgen0 is
   port (
     clk_100mhz : in STD_LOGIC;
     mclk : out STD_LOGIC;
+    bclk : out STD_LOGIC;
     reset : in STD_LOGIC
   );
   attribute NotValidForBitStream : boolean;
   attribute NotValidForBitStream of clkgen0 : entity is true;
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of clkgen0 : entity is "clkgen0,clk_wiz_v5_1,{component_name=clkgen0,use_phase_alignment=true,use_min_o_jitter=true,use_max_i_jitter=false,use_dyn_phase_shift=false,use_inclk_switchover=false,use_dyn_reconfig=false,enable_axi=0,feedback_source=FDBK_AUTO,PRIMITIVE=PLL,num_out_clk=1,clkin1_period=10.0,clkin2_period=10.0,use_power_down=false,use_reset=true,use_locked=false,use_inclk_stopped=false,feedback_type=SINGLE,CLOCK_MGR_TYPE=NA,manual_override=false}";
+  attribute CORE_GENERATION_INFO of clkgen0 : entity is "clkgen0,clk_wiz_v5_1,{component_name=clkgen0,use_phase_alignment=true,use_min_o_jitter=false,use_max_i_jitter=false,use_dyn_phase_shift=false,use_inclk_switchover=false,use_dyn_reconfig=false,enable_axi=0,feedback_source=FDBK_AUTO,PRIMITIVE=PLL,num_out_clk=2,clkin1_period=10.0,clkin2_period=10.0,use_power_down=false,use_reset=true,use_locked=false,use_inclk_stopped=false,feedback_type=SINGLE,CLOCK_MGR_TYPE=NA,manual_override=false}";
 end clkgen0;
 
 architecture STRUCTURE of clkgen0 is
 begin
 inst: entity work.clkgen0_clkgen0_clk_wiz
      port map (
+      bclk => bclk,
       clk_100mhz => clk_100mhz,
       mclk => mclk,
       reset => reset

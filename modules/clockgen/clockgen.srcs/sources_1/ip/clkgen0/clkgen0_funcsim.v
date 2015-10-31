@@ -1,7 +1,7 @@
 // Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2015.2 (lin64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-// Date        : Sat Oct 31 16:42:09 2015
+// Date        : Sat Oct 31 17:07:15 2015
 // Host        : asbestos running 64-bit Gentoo Base System release 2.2
 // Command     : write_verilog -force -mode funcsim
 //               /home/yanni/DSPDude/modules/clockgen/clockgen.srcs/sources_1/ip/clkgen0/clkgen0_funcsim.v
@@ -12,22 +12,26 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "clkgen0,clk_wiz_v5_1,{component_name=clkgen0,use_phase_alignment=true,use_min_o_jitter=true,use_max_i_jitter=false,use_dyn_phase_shift=false,use_inclk_switchover=false,use_dyn_reconfig=false,enable_axi=0,feedback_source=FDBK_AUTO,PRIMITIVE=PLL,num_out_clk=1,clkin1_period=10.0,clkin2_period=10.0,use_power_down=false,use_reset=true,use_locked=false,use_inclk_stopped=false,feedback_type=SINGLE,CLOCK_MGR_TYPE=NA,manual_override=false}" *) 
+(* CORE_GENERATION_INFO = "clkgen0,clk_wiz_v5_1,{component_name=clkgen0,use_phase_alignment=true,use_min_o_jitter=false,use_max_i_jitter=false,use_dyn_phase_shift=false,use_inclk_switchover=false,use_dyn_reconfig=false,enable_axi=0,feedback_source=FDBK_AUTO,PRIMITIVE=PLL,num_out_clk=2,clkin1_period=10.0,clkin2_period=10.0,use_power_down=false,use_reset=true,use_locked=false,use_inclk_stopped=false,feedback_type=SINGLE,CLOCK_MGR_TYPE=NA,manual_override=false}" *) 
 (* NotValidForBitStream *)
 module clkgen0
    (clk_100mhz,
     mclk,
+    bclk,
     reset);
   input clk_100mhz;
   output mclk;
+  output bclk;
   input reset;
 
+  wire bclk;
   (* IBUF_LOW_PWR *) wire clk_100mhz;
   wire mclk;
   wire reset;
 
   clkgen0_clkgen0_clk_wiz inst
-       (.clk_100mhz(clk_100mhz),
+       (.bclk(bclk),
+        .clk_100mhz(clk_100mhz),
         .mclk(mclk),
         .reset(reset));
 endmodule
@@ -36,11 +40,15 @@ endmodule
 module clkgen0_clkgen0_clk_wiz
    (clk_100mhz,
     mclk,
+    bclk,
     reset);
   input clk_100mhz;
   output mclk;
+  output bclk;
   input reset;
 
+  wire bclk;
+  wire bclk_clkgen0;
   wire clk_100mhz;
   wire clk_100mhz_clkgen0;
   wire clkfbout_buf_clkgen0;
@@ -48,7 +56,6 @@ module clkgen0_clkgen0_clk_wiz
   wire mclk;
   wire mclk_clkgen0;
   wire reset;
-  wire NLW_plle2_adv_inst_CLKOUT1_UNCONNECTED;
   wire NLW_plle2_adv_inst_CLKOUT2_UNCONNECTED;
   wire NLW_plle2_adv_inst_CLKOUT3_UNCONNECTED;
   wire NLW_plle2_adv_inst_CLKOUT4_UNCONNECTED;
@@ -75,8 +82,12 @@ module clkgen0_clkgen0_clk_wiz
        (.I(mclk_clkgen0),
         .O(mclk));
   (* BOX_TYPE = "PRIMITIVE" *) 
+  BUFG clkout2_buf
+       (.I(bclk_clkgen0),
+        .O(bclk));
+  (* BOX_TYPE = "PRIMITIVE" *) 
   PLLE2_ADV #(
-    .BANDWIDTH("HIGH"),
+    .BANDWIDTH("OPTIMIZED"),
     .CLKFBOUT_MULT(29),
     .CLKFBOUT_PHASE(0.000000),
     .CLKIN1_PERIOD(10.000000),
@@ -84,7 +95,7 @@ module clkgen0_clkgen0_clk_wiz
     .CLKOUT0_DIVIDE(59),
     .CLKOUT0_DUTY_CYCLE(0.500000),
     .CLKOUT0_PHASE(0.000000),
-    .CLKOUT1_DIVIDE(1),
+    .CLKOUT1_DIVIDE(118),
     .CLKOUT1_DUTY_CYCLE(0.500000),
     .CLKOUT1_PHASE(0.000000),
     .CLKOUT2_DIVIDE(1),
@@ -114,7 +125,7 @@ module clkgen0_clkgen0_clk_wiz
         .CLKIN2(1'b0),
         .CLKINSEL(1'b1),
         .CLKOUT0(mclk_clkgen0),
-        .CLKOUT1(NLW_plle2_adv_inst_CLKOUT1_UNCONNECTED),
+        .CLKOUT1(bclk_clkgen0),
         .CLKOUT2(NLW_plle2_adv_inst_CLKOUT2_UNCONNECTED),
         .CLKOUT3(NLW_plle2_adv_inst_CLKOUT3_UNCONNECTED),
         .CLKOUT4(NLW_plle2_adv_inst_CLKOUT4_UNCONNECTED),
