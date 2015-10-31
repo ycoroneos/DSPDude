@@ -1,0 +1,9 @@
+Vivado Simulator 2015.2
+Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2015.2/bin/unwrapped/lnx64.o/xelab -wto 0793759d215b4f8bb79737a9a15286be --debug typical --relax --mt 8 --maxdelay -L xil_defaultlib -L simprims_ver -L secureip --snapshot clockmaker_tb_time_synth -transport_int_delays -pulse_r 0 -pulse_int_r 0 xil_defaultlib.clockmaker_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-426] cannot find port clk100mhz on this module [/home/yanni/DSPDude/modules/clockgen/clockgen.srcs/sim_1/new/clockmaker_tb.v:29]
+Completed static elaboration
+Starting simulation data flow analysis
+ERROR: [XSIM 43-3250] File /home/yanni/DSPDude/modules/clockgen/clockgen.sim/sim_1/synth/timing/clockmaker_tb_time_synth.v, line 417. Unsupported named port connection association : .clk100mhz(clk100mhz) where formal is alias port.

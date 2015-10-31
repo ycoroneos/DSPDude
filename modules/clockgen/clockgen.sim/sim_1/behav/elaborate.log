@@ -1,0 +1,26 @@
+Vivado Simulator 2015.2
+Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2015.2/bin/unwrapped/lnx64.o/xelab -wto 0793759d215b4f8bb79737a9a15286be --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot clockmaker_tb_behav xil_defaultlib.clockmaker_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.PLLE2_ADV(CLKFBOUT_MULT=29,CLKIN...
+Compiling module unisims_ver.BUFG
+Compiling module xil_defaultlib.clkgen0_clk_wiz
+Compiling module xil_defaultlib.clkgen0
+Compiling module unisims_ver.MMCME2_ADV(CLKFBOUT_MULT_F=49.5,...
+Compiling module xil_defaultlib.clkgen1_clk_wiz
+Compiling module xil_defaultlib.clkgen1
+Compiling module unisims_ver.MMCME2_ADV(CLKFBOUT_MULT_F=63.62...
+Compiling module xil_defaultlib.clkgen2_clk_wiz
+Compiling module xil_defaultlib.clkgen2
+Compiling module xil_defaultlib.slowdivider(LOGLENGTH=6,COUNTVAL...
+Compiling module xil_defaultlib.slowdivider(LOGLENGTH=10,COUNTVA...
+Compiling module xil_defaultlib.clockmaker
+Compiling module xil_defaultlib.clockmaker_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot clockmaker_tb_behav

@@ -1,0 +1,16 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/yanni/DSPDude/modules/clockgen/clockgen.sim/sim_1/synth/timing/clockmaker_tb_time_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clkgen0
+INFO: [VRFC 10-311] analyzing module clkgen0_clkgen0_clk_wiz
+INFO: [VRFC 10-311] analyzing module clkgen1
+INFO: [VRFC 10-311] analyzing module clkgen1_clkgen1_clk_wiz
+INFO: [VRFC 10-311] analyzing module clkgen2
+INFO: [VRFC 10-311] analyzing module clkgen2_clkgen2_clk_wiz
+INFO: [VRFC 10-311] analyzing module clockmaker
+INFO: [VRFC 10-311] analyzing module slowdivider
+INFO: [VRFC 10-311] analyzing module slowdivider__parameterized0
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/yanni/DSPDude/modules/clockgen/clockgen.srcs/sim_1/new/clockmaker_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clockmaker_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/yanni/DSPDude/modules/clockgen/clockgen.sim/sim_1/synth/timing/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+WARNING: [VRFC 10-1195] overwriting previous definition of module glbl [/home/yanni/DSPDude/modules/clockgen/clockgen.sim/sim_1/synth/timing/glbl.v:6]

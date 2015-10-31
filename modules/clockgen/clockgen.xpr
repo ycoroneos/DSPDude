@@ -53,12 +53,20 @@
       </Config>
     </FileSet>
     <FileSet Name="sim_1" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_1">
+      <File Path="$PSRCDIR/sim_1/new/clockmaker_tb.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="clockmaker"/>
+        <Option Name="TopModule" Val="clockmaker_tb"/>
         <Option Name="TopLib" Val="xil_defaultlib"/>
         <Option Name="TopAutoSet" Val="TRUE"/>
         <Option Name="SrcSet" Val="sources_1"/>
+        <Option Name="xsim.simulate.runtime" Val="500us"/>
       </Config>
     </FileSet>
     <FileSet Name="clkgen0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/clkgen0">
@@ -120,6 +128,19 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
+        <CompFileExtendedInfo CompFileName="clkgen2.xci" FileRelPathName="clkgen2_ooc.xdc"/>
+        <CompFileExtendedInfo CompFileName="clkgen2.xci" FileRelPathName="doc/clk_wiz_v5_1_changelog.txt"/>
+        <CompFileExtendedInfo CompFileName="clkgen2.xci" FileRelPathName="clkgen2_clk_wiz.v"/>
+        <CompFileExtendedInfo CompFileName="clkgen2.xci" FileRelPathName="clkgen2.v"/>
+        <CompFileExtendedInfo CompFileName="clkgen2.xci" FileRelPathName="clkgen2_board.xdc"/>
+        <CompFileExtendedInfo CompFileName="clkgen2.xci" FileRelPathName="clkgen2.xdc"/>
+        <CompFileExtendedInfo CompFileName="clkgen2.xci" FileRelPathName="clkgen2.veo"/>
+        <CompFileExtendedInfo CompFileName="clkgen2.xci" FileRelPathName="clkgen2.xml"/>
+        <CompFileExtendedInfo CompFileName="clkgen2.xci" FileRelPathName="clkgen2_funcsim.vhdl"/>
+        <CompFileExtendedInfo CompFileName="clkgen2.xci" FileRelPathName="clkgen2_stub.vhdl"/>
+        <CompFileExtendedInfo CompFileName="clkgen2.xci" FileRelPathName="clkgen2_funcsim.v"/>
+        <CompFileExtendedInfo CompFileName="clkgen2.xci" FileRelPathName="clkgen2.dcp"/>
+        <CompFileExtendedInfo CompFileName="clkgen2.xci" FileRelPathName="clkgen2_stub.v"/>
       </File>
       <Config>
         <Option Name="TopModule" Val="clkgen2"/>

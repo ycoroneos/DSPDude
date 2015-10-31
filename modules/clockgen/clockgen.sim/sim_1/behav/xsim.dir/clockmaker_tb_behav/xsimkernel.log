@@ -1,0 +1,4 @@
+Running: xsim.dir/clockmaker_tb_behav/xsimk -simmode gui -wdb clockmaker_tb_behav.wdb -simrunnum 0 -socket 35276
+Design successfully loaded
+Design Loading Memory Usage: 114912 KB (Peak: 115836 KB)
+Design Loading CPU Usage: 10 ms
