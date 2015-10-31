@@ -1,0 +1,6 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/yanni/DSPDude/modules/akm4396/serial_comms/serial_comms.srcs/sources_1/new/serialcontroller.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module serialcontroller
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/yanni/DSPDude/modules/akm4396/serial_comms/serial_comms.srcs/sim_1/new/serialcontroller_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module serialcontroller_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/yanni/DSPDude/modules/akm4396/serial_comms/serial_comms.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

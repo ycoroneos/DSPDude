@@ -1,0 +1,24 @@
+datasheet pg.4:
+  master clock freq=[7.7MHz,41.472MHz]
+  fs(max) is 216KHz
+  VDD is 3.3v
+  192KHz PCM over i2s
+  Pin 8 is CSN => chip select in serial mode
+  Pin 10 is CCLK => control data clock in serial mode
+  Pin 11 is CDTI => control data input pin in serial mode
+  Pin 25 is P/S => parallel/serial select LOW=serial mode
+  Pin 27 is CAD1 => chip address 1 in serial mode ???
+  Pin 26 is DZFL => left channel zero input detect in serial mode
+  Pin 28 is DZFR => right channel zero input detect in serial mode
+
+serial control mode: pg.27
+  3 lines: chip select (CSN), clock (CCLK), data (CDTI)
+  CCLK goes low at the same time as CSN
+  CCLK min period=200ns, lets use 9.6KHz
+  CDTI gets sampled on the rising edge of CCLK
+  data comes out MSB first
+  frame look like MSB->[C1,C0,R/W,A4,A3,A2,A1,A1,D7,D6.D5,D4,D3,D2,D1,D0]<-LSB
+  C1-C0 = chip address c1=cad1, c0=cad0
+  R/W = 1 because write-only
+  A4-A0 = register address. register map on pg.28
+  D7-D0 = data
