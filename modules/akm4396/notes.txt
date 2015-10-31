@@ -11,7 +11,8 @@ datasheet pg.4:
   Pin 10 is CCLK => control data clock in serial mode
   Pin 11 is CDTI => control data input pin in serial mode
   Pin 25 is P/S => parallel/serial select LOW=serial mode
-  Pin 27 is CAD1 => chip address 1 in serial mode ???
+  Pin 9 is CAD0 => chip address 0 in serial mode
+  Pin 27 is CAD1 => chip address 1 in serial mode
   Pin 26 is DZFL => left channel zero input detect in serial mode
   Pin 28 is DZFR => right channel zero input detect in serial mode
 
