@@ -36,4 +36,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log clockmaker.vds -m64 -mode batch -messageDb vivado.pb -notrace -source clockmaker.tcl
+EAStep vivado -log nexys4.vds -m64 -mode batch -messageDb vivado.pb -notrace -source nexys4.tcl

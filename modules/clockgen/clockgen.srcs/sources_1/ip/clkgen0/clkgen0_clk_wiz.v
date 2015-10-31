@@ -105,7 +105,7 @@ module clkgen0_clk_wiz
   wire        reset_high;
 
   PLLE2_ADV
-  #(.BANDWIDTH            ("OPTIMIZED"),
+  #(.BANDWIDTH            ("HIGH"),
     .COMPENSATION         ("ZHOLD"),
     .DIVCLK_DIVIDE        (2),
     .CLKFBOUT_MULT        (29),

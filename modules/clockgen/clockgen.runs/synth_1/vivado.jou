@@ -2,9 +2,9 @@
 # Vivado v2015.2 (64-bit)
 # SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
 # IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
-# Start of session at: Sat Oct 31 15:16:21 2015
-# Process ID: 29427
-# Log file: /home/yanni/DSPDude/modules/clockgen/clockgen.runs/synth_1/clockmaker.vds
+# Start of session at: Sat Oct 31 16:43:56 2015
+# Process ID: 21595
+# Log file: /home/yanni/DSPDude/modules/clockgen/clockgen.runs/synth_1/nexys4.vds
 # Journal file: /home/yanni/DSPDude/modules/clockgen/clockgen.runs/synth_1/vivado.jou
 #-----------------------------------------------------------
-source clockmaker.tcl -notrace
+source nexys4.tcl -notrace

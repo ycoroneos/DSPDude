@@ -1,0 +1,210 @@
+#-----------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Sat Oct 31 16:24:54 2015
+# Process ID: 16043
+# Log file: /home/yanni/DSPDude/modules/clockgen/clockgen.runs/impl_1/nexys4.vdi
+# Journal file: /home/yanni/DSPDude/modules/clockgen/clockgen.runs/impl_1/vivado.jou
+#-----------------------------------------------------------
+source nexys4.tcl -notrace
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Project 1-454] Reading design checkpoint '/home/yanni/DSPDude/modules/clockgen/clockgen.runs/clkgen0_synth_1/clkgen0.dcp' for cell 'clocks/someclocks'
+INFO: [Project 1-454] Reading design checkpoint '/home/yanni/DSPDude/modules/clockgen/clockgen.runs/clkgen2_synth_1/clkgen2.dcp' for cell 'clocks/bclkgen'
+INFO: [Netlist 29-17] Analyzing 5 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2015.2
+INFO: [Device 21-403] Loading part xc7a100tcsg324-3
+INFO: [Project 1-570] Preparing netlist for logic optimization
+CRITICAL WARNING: [Shape Builder 18-119] Failed to create I/OLOGIC Route Through shape for instance clocks/someclocks/inst/clkin1_ibufg. Found overlapping instances within the shape: clocks/bclkgen/inst/clkin1_ibufg and clocks/someclocks/inst/clkin1_ibufg.
+Parsing XDC File [/home/yanni/DSPDude/modules/clockgen/clockgen.srcs/sources_1/ip/clkgen0/clkgen0_board.xdc] for cell 'clocks/someclocks/inst'
+Finished Parsing XDC File [/home/yanni/DSPDude/modules/clockgen/clockgen.srcs/sources_1/ip/clkgen0/clkgen0_board.xdc] for cell 'clocks/someclocks/inst'
+Parsing XDC File [/home/yanni/DSPDude/modules/clockgen/clockgen.srcs/sources_1/ip/clkgen0/clkgen0.xdc] for cell 'clocks/someclocks/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/yanni/DSPDude/modules/clockgen/clockgen.srcs/sources_1/ip/clkgen0/clkgen0.xdc:56]
+INFO: [Timing 38-2] Deriving generated clocks [/home/yanni/DSPDude/modules/clockgen/clockgen.srcs/sources_1/ip/clkgen0/clkgen0.xdc:56]
+get_clocks: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1524.109 ; gain = 402.453 ; free physical = 22415 ; free virtual = 27854
+Finished Parsing XDC File [/home/yanni/DSPDude/modules/clockgen/clockgen.srcs/sources_1/ip/clkgen0/clkgen0.xdc] for cell 'clocks/someclocks/inst'
+Parsing XDC File [/home/yanni/DSPDude/modules/clockgen/clockgen.srcs/sources_1/ip/clkgen2/clkgen2_board.xdc] for cell 'clocks/bclkgen/inst'
+Finished Parsing XDC File [/home/yanni/DSPDude/modules/clockgen/clockgen.srcs/sources_1/ip/clkgen2/clkgen2_board.xdc] for cell 'clocks/bclkgen/inst'
+Parsing XDC File [/home/yanni/DSPDude/modules/clockgen/clockgen.srcs/sources_1/ip/clkgen2/clkgen2.xdc] for cell 'clocks/bclkgen/inst'
+WARNING: [Constraints 18-619] A clock with name 'CLK100MHZ' already exists, overwriting the previous clock with the same name. [/home/yanni/DSPDude/modules/clockgen/clockgen.srcs/sources_1/ip/clkgen2/clkgen2.xdc:55]
+Finished Parsing XDC File [/home/yanni/DSPDude/modules/clockgen/clockgen.srcs/sources_1/ip/clkgen2/clkgen2.xdc] for cell 'clocks/bclkgen/inst'
+Parsing XDC File [/home/yanni/DSPDude/modules/clockgen/clockgen.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc]
+CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, Instance clocks/someclocks/inst/clkin1_ibufg can not be placed in INBUF_EN of site IOB_X1Y126 because the bel is occupied by clocks/bclkgen/inst/clkin1_ibufg. This could be caused by bel constraint conflict [/home/yanni/DSPDude/modules/clockgen/clockgen.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc:7]
+Resolution: Verify the location constraints for differential ports are correctly specified in your constraints. The Site type should be of form: IO_LxxP for P-side, and IO_LxxN for N-side (Neg Diff Pair) 
+CRITICAL WARNING: [Designutils 20-964] Command failed: . [/home/yanni/DSPDude/modules/clockgen/clockgen.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc:7]
+Finished Parsing XDC File [/home/yanni/DSPDude/modules/clockgen/clockgen.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc]
+INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp '/home/yanni/DSPDude/modules/clockgen/clockgen.runs/clkgen0_synth_1/clkgen0.dcp'
+INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp '/home/yanni/DSPDude/modules/clockgen/clockgen.runs/clkgen2_synth_1/clkgen2.dcp'
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+link_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1524.109 ; gain = 616.418 ; free physical = 22415 ; free virtual = 27854
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 6 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.09 . Memory (MB): peak = 1537.133 ; gain = 5.020 ; free physical = 22415 ; free virtual = 27854
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-2] Deriving generated clocks
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 1371c67ce
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1541.133 ; gain = 0.000 ; free physical = 22415 ; free virtual = 27854
+
+Phase 2 Constant Propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-10] Eliminated 2 cells.
+Phase 2 Constant Propagation | Checksum: 1e65353d1
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1541.133 ; gain = 0.000 ; free physical = 22415 ; free virtual = 27854
+
+Phase 3 Sweep
+INFO: [Opt 31-12] Eliminated 3 unconnected nets.
+INFO: [Opt 31-11] Eliminated 2 unconnected cells.
+Phase 3 Sweep | Checksum: 1b36b80be
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1541.133 ; gain = 0.000 ; free physical = 22415 ; free virtual = 27854
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1541.133 ; gain = 0.000 ; free physical = 22415 ; free virtual = 27854
+Ending Logic Optimization Task | Checksum: 1b36b80be
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1541.133 ; gain = 0.000 ; free physical = 22415 ; free virtual = 27854
+Implement Debug Cores | Checksum: 1371c67ce
+Logic Optimization | Checksum: 1371c67ce
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 3.12 ns.
+Ending Power Optimization Task | Checksum: 1b36b80be
+
+Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.02 . Memory (MB): peak = 1541.133 ; gain = 0.000 ; free physical = 22415 ; free virtual = 27854
+INFO: [Common 17-83] Releasing license: Implementation
+27 Infos, 1 Warnings, 3 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1573.148 ; gain = 0.000 ; free physical = 22414 ; free virtual = 27854
+INFO: [DRC 23-27] Running DRC with 6 threads
+INFO: [Coretcl 2-168] The results of DRC are in file /home/yanni/DSPDude/modules/clockgen/clockgen.runs/impl_1/nexys4_drc_opted.rpt.
+INFO: [#UNDEF] Cannot write hardware definition file as there are no IPI block design hardware handoff files present
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [DRC 23-27] Running DRC with 6 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 6 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 6 CPUs
+
+Phase 1 Placer Runtime Estimator
+Phase 1 Placer Runtime Estimator | Checksum: ea6b717a
+
+Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.02 . Memory (MB): peak = 1585.152 ; gain = 0.004 ; free physical = 22389 ; free virtual = 27828
+
+Phase 2 Placer Initialization
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1585.152 ; gain = 0.000 ; free physical = 22389 ; free virtual = 27828
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1585.152 ; gain = 0.000 ; free physical = 22389 ; free virtual = 27828
+
+Phase 2.1 IO Placement/ Clock Placement/ Build Placer Device
+
+Phase 2.1.1 Pre-Place Cells
+Phase 2.1.1 Pre-Place Cells | Checksum: 87ae1ddf
+
+Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.05 . Memory (MB): peak = 1585.152 ; gain = 0.004 ; free physical = 22389 ; free virtual = 27828
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 2.1.2 IO & Clk Clean Up
+Phase 2.1.2 IO & Clk Clean Up | Checksum: 87ae1ddf
+
+Time (s): cpu = 00:00:00.59 ; elapsed = 00:00:00.54 . Memory (MB): peak = 1643.168 ; gain = 58.020 ; free physical = 22387 ; free virtual = 27826
+
+Phase 2.1.3 Implementation Feasibility check On IDelay
+Phase 2.1.3 Implementation Feasibility check On IDelay | Checksum: 87ae1ddf
+
+Time (s): cpu = 00:00:00.59 ; elapsed = 00:00:00.54 . Memory (MB): peak = 1643.168 ; gain = 58.020 ; free physical = 22387 ; free virtual = 27826
+
+Phase 2.1.4 Commit IO Placement
+Phase 2.1.4 Commit IO Placement | Checksum: cd915d0b
+
+Time (s): cpu = 00:00:00.59 ; elapsed = 00:00:00.54 . Memory (MB): peak = 1643.168 ; gain = 58.020 ; free physical = 22387 ; free virtual = 27826
+Phase 2.1 IO Placement/ Clock Placement/ Build Placer Device | Checksum: fc546a30
+
+Time (s): cpu = 00:00:00.59 ; elapsed = 00:00:00.54 . Memory (MB): peak = 1643.168 ; gain = 58.020 ; free physical = 22387 ; free virtual = 27826
+
+Phase 2.2 Build Placer Netlist Model
+
+Phase 2.2.1 Place Init Design
+
+Phase 2.2.1.1 Init Lut Pin Assignment
+Phase 2.2.1.1 Init Lut Pin Assignment | Checksum: 1139c6016
+
+Time (s): cpu = 00:00:00.60 ; elapsed = 00:00:00.55 . Memory (MB): peak = 1643.168 ; gain = 58.020 ; free physical = 22387 ; free virtual = 27826
+Phase 2.2.1 Place Init Design | Checksum: 1cc0159d9
+
+Time (s): cpu = 00:00:00.63 ; elapsed = 00:00:00.58 . Memory (MB): peak = 1659.176 ; gain = 74.027 ; free physical = 22387 ; free virtual = 27826
+Phase 2.2 Build Placer Netlist Model | Checksum: 1cc0159d9
+
+Time (s): cpu = 00:00:00.63 ; elapsed = 00:00:00.58 . Memory (MB): peak = 1659.176 ; gain = 74.027 ; free physical = 22387 ; free virtual = 27826
+
+Phase 2.3 Constrain Clocks/Macros
+Phase 2.3 Constrain Clocks/Macros | Checksum: 1cc0159d9
+
+Time (s): cpu = 00:00:00.63 ; elapsed = 00:00:00.58 . Memory (MB): peak = 1659.176 ; gain = 74.027 ; free physical = 22387 ; free virtual = 27826
+Phase 2 Placer Initialization | Checksum: 1cc0159d9
+
+Time (s): cpu = 00:00:00.63 ; elapsed = 00:00:00.58 . Memory (MB): peak = 1659.176 ; gain = 74.027 ; free physical = 22387 ; free virtual = 27826
+
+Phase 3 Final Placement Cleanup
+Phase 3 Final Placement Cleanup | Checksum: 1cc0159d9
+
+Time (s): cpu = 00:00:00.63 ; elapsed = 00:00:00.58 . Memory (MB): peak = 1659.176 ; gain = 74.027 ; free physical = 22387 ; free virtual = 27826
+INFO: [Place 30-281] No place-able instance is found; design doesn't contain any instance or all instances are placed
+Ending Placer Task | Checksum: fc546a30
+
+Time (s): cpu = 00:00:00.63 ; elapsed = 00:00:00.58 . Memory (MB): peak = 1659.176 ; gain = 74.027 ; free physical = 22387 ; free virtual = 27826
+INFO: [Common 17-83] Releasing license: Implementation
+41 Infos, 1 Warnings, 3 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1659.176 ; gain = 0.000 ; free physical = 22386 ; free virtual = 27826
+report_io: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.06 . Memory (MB): peak = 1659.176 ; gain = 0.000 ; free physical = 22383 ; free virtual = 27822
+report_utilization: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.04 . Memory (MB): peak = 1659.176 ; gain = 0.000 ; free physical = 22383 ; free virtual = 27822
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.02 . Memory (MB): peak = 1659.176 ; gain = 0.000 ; free physical = 22383 ; free virtual = 27822
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
+Running DRC as a precondition to command route_design
+INFO: [DRC 23-27] Running DRC with 6 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 6 CPUs
+
+Phase 1 Build RT Design

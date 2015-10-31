@@ -27,7 +27,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 ISEStep( "vivado",
-         "-log clockmaker.vds -m64 -mode batch -messageDb vivado.pb -notrace -source clockmaker.tcl" );
+         "-log nexys4.vds -m64 -mode batch -messageDb vivado.pb -notrace -source nexys4.tcl" );
 
 
 

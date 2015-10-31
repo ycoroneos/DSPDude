@@ -1,7 +1,7 @@
 -- Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2015.2 (lin64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
--- Date        : Sat Oct 31 14:58:27 2015
+-- Date        : Sat Oct 31 16:42:09 2015
 -- Host        : asbestos running 64-bit Gentoo Base System release 2.2
 -- Command     : write_vhdl -force -mode funcsim
 --               /home/yanni/DSPDude/modules/clockgen/clockgen.srcs/sources_1/ip/clkgen0/clkgen0_funcsim.vhdl
@@ -69,7 +69,7 @@ clkout1_buf: unisim.vcomponents.BUFG
     );
 plle2_adv_inst: unisim.vcomponents.PLLE2_ADV
     generic map(
-      BANDWIDTH => "OPTIMIZED",
+      BANDWIDTH => "HIGH",
       CLKFBOUT_MULT => 29,
       CLKFBOUT_PHASE => 0.000000,
       CLKIN1_PERIOD => 10.000000,
@@ -159,7 +159,7 @@ entity clkgen0 is
   attribute NotValidForBitStream : boolean;
   attribute NotValidForBitStream of clkgen0 : entity is true;
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of clkgen0 : entity is "clkgen0,clk_wiz_v5_1,{component_name=clkgen0,use_phase_alignment=true,use_min_o_jitter=false,use_max_i_jitter=false,use_dyn_phase_shift=false,use_inclk_switchover=false,use_dyn_reconfig=false,enable_axi=0,feedback_source=FDBK_AUTO,PRIMITIVE=PLL,num_out_clk=1,clkin1_period=10.0,clkin2_period=10.0,use_power_down=false,use_reset=true,use_locked=false,use_inclk_stopped=false,feedback_type=SINGLE,CLOCK_MGR_TYPE=NA,manual_override=false}";
+  attribute CORE_GENERATION_INFO of clkgen0 : entity is "clkgen0,clk_wiz_v5_1,{component_name=clkgen0,use_phase_alignment=true,use_min_o_jitter=true,use_max_i_jitter=false,use_dyn_phase_shift=false,use_inclk_switchover=false,use_dyn_reconfig=false,enable_axi=0,feedback_source=FDBK_AUTO,PRIMITIVE=PLL,num_out_clk=1,clkin1_period=10.0,clkin2_period=10.0,use_power_down=false,use_reset=true,use_locked=false,use_inclk_stopped=false,feedback_type=SINGLE,CLOCK_MGR_TYPE=NA,manual_override=false}";
 end clkgen0;
 
 architecture STRUCTURE of clkgen0 is
