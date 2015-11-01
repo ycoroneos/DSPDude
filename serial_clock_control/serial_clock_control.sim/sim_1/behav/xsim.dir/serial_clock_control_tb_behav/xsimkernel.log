@@ -2,3 +2,6 @@ Running: xsim.dir/serial_clock_control_tb_behav/xsimk -simmode gui -wdb serial_c
 Design successfully loaded
 Design Loading Memory Usage: 113304 KB (Peak: 113336 KB)
 Design Loading CPU Usage: 10 ms
+Simulation completed
+Simulation Memory Usage: 252576 KB (Peak: 318112 KB)
+Simulation CPU Usage: 990 ms
