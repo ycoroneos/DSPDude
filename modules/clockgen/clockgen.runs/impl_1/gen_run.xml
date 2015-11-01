@@ -1,23 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-3" LaunchTime="1446325724">
+  <File Type="RUN-CONSTRS" Name="$PDATADIR/runs/impl_1/constrs_in.xml"/>
+  <File Type="RUN-SRCS" Name="$PDATADIR/runs/impl_1/sources.xml"/>
+  <File Type="RUN-STRAT" Name="$PDATADIR/runs/impl_1/impl_1.psg"/>
+  <File Type="PA-TCL" Name="nexys4.tcl"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="nexys4_timing_summary_postroute_physopted.pb"/>
+  <File Type="OPT-DCP" Name="nexys4_opt.dcp"/>
+  <File Type="OPT-DRC" Name="nexys4_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="nexys4.hwdef"/>
+  <File Type="PWROPT-DCP" Name="nexys4_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="nexys4_drc_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="nexys4_placed.dcp"/>
+  <File Type="PLACE-IO" Name="nexys4_io_placed.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="nexys4_timing_summary_postroute_physopted.rpt"/>
+  <File Type="BG-BIT" Name="nexys4.bit"/>
+  <File Type="ROUTE-TIMING-RPX" Name="nexys4_timing_summary_routed.rpx"/>
+  <File Type="BG-BIN" Name="nexys4.bin"/>
+  <File Type="BITSTR-MSK" Name="nexys4.msk"/>
+  <File Type="ROUTE-CLK" Name="nexys4_clock_utilization_routed.rpt"/>
+  <File Type="BG-BGN" Name="nexys4.bgn"/>
+  <File Type="BITSTR-RBT" Name="nexys4.rbt"/>
+  <File Type="BITSTR-NKY" Name="nexys4.nky"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="nexys4_postplace_pwropt.dcp"/>
+  <File Type="BITSTR-BMM" Name="nexys4_bd.bmm"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="nexys4_timing_summary_postroute_physopted.rpx"/>
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <File Type="RDI-RDI" Name="nexys4.vdi"/>
-  <File Type="BG-DRC" Name="nexys4.drc"/>
-  <File Type="BG-BGN" Name="nexys4.bgn"/>
-  <File Type="BITSTR-SYSDEF" Name="nexys4.sysdef"/>
-  <File Type="BITSTR-MMI" Name="nexys4.mmi"/>
-  <File Type="BITSTR-BMM" Name="nexys4_bd.bmm"/>
-  <File Type="BITSTR-NKY" Name="nexys4.nky"/>
-  <File Type="BITSTR-RBT" Name="nexys4.rbt"/>
-  <File Type="BITSTR-MSK" Name="nexys4.msk"/>
-  <File Type="BG-BIN" Name="nexys4.bin"/>
-  <File Type="BG-BIT" Name="nexys4.bit"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="nexys4_timing_summary_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="nexys4_timing_summary_postroute_physopted.rpt"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="nexys4_postroute_physopt.dcp"/>
-  <File Type="ROUTE-CLK" Name="nexys4_clock_utilization_routed.rpt"/>
+  <File Type="BG-DRC" Name="nexys4.drc"/>
   <File Type="ROUTE-SIMILARITY" Name="nexys4_incremental_reuse_routed.rpt"/>
-  <File Type="ROUTE-TIMING-RPX" Name="nexys4_timing_summary_routed.rpx"/>
+  <File Type="BITSTR-MMI" Name="nexys4.mmi"/>
+  <File Type="PHYSOPT-DCP" Name="nexys4_physopt.dcp"/>
+  <File Type="BITSTR-SYSDEF" Name="nexys4.sysdef"/>
+  <File Type="PHYSOPT-DRC" Name="nexys4_drc_physopted.rpt"/>
   <File Type="ROUTE-TIMING-PB" Name="nexys4_timing_summary_routed.pb"/>
   <File Type="ROUTE-TIMINGSUMMARY" Name="nexys4_timing_summary_routed.rpt"/>
   <File Type="ROUTE-STATUS-PB" Name="nexys4_route_status.pb"/>
@@ -27,27 +42,12 @@
   <File Type="ROUTE-DRC-PB" Name="nexys4_drc_routed.pb"/>
   <File Type="ROUTE-DRC" Name="nexys4_drc_routed.rpt"/>
   <File Type="ROUTE-DCP" Name="nexys4_routed.dcp"/>
-  <File Type="PHYSOPT-DRC" Name="nexys4_drc_physopted.rpt"/>
-  <File Type="PHYSOPT-DCP" Name="nexys4_physopt.dcp"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="nexys4_postplace_pwropt.dcp"/>
   <File Type="PLACE-PRE-SIMILARITY" Name="nexys4_incremental_reuse_pre_placed.rpt"/>
   <File Type="PLACE-SIMILARITY" Name="nexys4_incremental_reuse_placed.rpt"/>
   <File Type="PLACE-CTRL" Name="nexys4_control_sets_placed.rpt"/>
   <File Type="PLACE-UTIL-PB" Name="nexys4_utilization_placed.pb"/>
   <File Type="PLACE-UTIL" Name="nexys4_utilization_placed.rpt"/>
   <File Type="PLACE-CLK" Name="nexys4_clock_utilization_placed.rpt"/>
-  <File Type="PLACE-IO" Name="nexys4_io_placed.rpt"/>
-  <File Type="PLACE-DCP" Name="nexys4_placed.dcp"/>
-  <File Type="PWROPT-DRC" Name="nexys4_drc_pwropted.rpt"/>
-  <File Type="PWROPT-DCP" Name="nexys4_pwropt.dcp"/>
-  <File Type="OPT-HWDEF" Name="nexys4.hwdef"/>
-  <File Type="OPT-DRC" Name="nexys4_drc_opted.rpt"/>
-  <File Type="OPT-DCP" Name="nexys4_opt.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="nexys4_timing_summary_postroute_physopted.pb"/>
-  <File Type="PA-TCL" Name="nexys4.tcl"/>
-  <File Type="RUN-STRAT" Name="$PDATADIR/runs/impl_1/impl_1.psg"/>
-  <File Type="RUN-SRCS" Name="$PDATADIR/runs/impl_1/sources.xml"/>
-  <File Type="RUN-CONSTRS" Name="$PDATADIR/runs/impl_1/constrs_in.xml"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/slowdivider.v">
@@ -92,9 +92,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015">
-      <Desc>Vivado Implementation Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015"/>
     <Step Id="init_design"/>
     <Step Id="opt_design"/>
     <Step Id="power_opt_design"/>
