@@ -23,7 +23,7 @@ module i2s_output(
     input wire reset,
     input wire bick, 
     input wire lrck, 
-    input wire [23:0] data_in,  // 24 bit fpga data
+    input wire [23:0] data_left, data_right,  // 24 bit fpga data
     input wire start,           // start bit for i2s
     output reg stop = 0,        // stop bit for i2s
     output reg sdata            // data that goes to codec
@@ -46,9 +46,10 @@ module i2s_output(
         case (state) 
             START: begin
             // initialize registers and wait for start assertion
-                if (start) begin            
+                if (start) begin  
+                    stop <= 0;          
                     count <= 0;
-                    shiftreg <= data_in;
+                    shiftreg <= data_left;
                     state <= LCH_DATA;           
                     end         
                 end
@@ -60,7 +61,7 @@ module i2s_output(
                 if (count >= DATA_COUNT) begin  
                 // reset registers and stop loading data when left data is done
                     count <= 0;
-                    shiftreg <= data_in;
+                    shiftreg <= data_right;
                     state <= STOP;
                     end
                 end
@@ -72,7 +73,7 @@ module i2s_output(
                 if (!lrck | (count >= DATA_COUNT)) begin 
                 // reset registers and set stop bit when right data is done
                     count <= 0;
-                    shiftreg <= data_in;
+                    shiftreg <= data_left;
                     stop <= 1;
                     state <= STOP;
                     end
@@ -86,4 +87,3 @@ module i2s_output(
             endcase  
         end            
 endmodule
-

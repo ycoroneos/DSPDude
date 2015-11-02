@@ -28,7 +28,7 @@ module i2s_output_tb(
     reg bick;
     reg lrck;
     reg start;
-    reg [23:0] data_in;
+    reg [23:0] data_left, data_right;
         
     // Outputs
     wire stop;
@@ -40,7 +40,8 @@ module i2s_output_tb(
         .bick(bick),
         .lrck(lrck),
         .start(start), 
-        .data_in(data_in),
+        .data_left(data_left),
+        .data_right(data_right),
         .stop(stop),
         .sdata(sdata)
         );
@@ -53,11 +54,17 @@ module i2s_output_tb(
         bick = 0;
         lrck = 0;
         start = 0;
-        data_in = 0;
+        data_left = 0;
+        data_right = 0;
         
         #100;
         start=1;
-        data_in=24'hBAB1E5;
+        data_left=24'hBAB1E5;
+        data_right=24'h7171E5;
+        #20;
+        start=0;
+        #100;
+        start=1;
         #20;
         start=0;
         end
