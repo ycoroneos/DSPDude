@@ -19,7 +19,6 @@ read_verilog -library xil_defaultlib {
   /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/sources_1/imports/new/slowdivider.v
   /home/yanni/DSPDude/modules/tonegen/tonegen.srcs/sources_1/new/tonegen.v
   /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/sources_1/imports/new/serialcontroller.v
-  /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/sources_1/imports/Codec/i2s_output.v
   /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/sources_1/imports/new/akm4396.v
   /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/sources_1/imports/new/clockmaker.v
   /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/sources_1/imports/new/nexys4.v

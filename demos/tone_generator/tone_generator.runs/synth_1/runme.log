@@ -15,12 +15,12 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 939.691 ; gain = 140.520 ; free physical = 28360 ; free virtual = 29342
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 938.691 ; gain = 139.520 ; free physical = 29314 ; free virtual = 30463
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'nexys4' [/home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/sources_1/imports/new/nexys4.v:23]
 INFO: [Synth 8-638] synthesizing module 'clockmaker' [/home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/sources_1/imports/new/clockmaker.v:27]
-INFO: [Synth 8-638] synthesizing module 'clkgen0' [/home/yanni/DSPDude/demos/tone_generator/tone_generator.runs/synth_1/.Xil/Vivado-22740-asbestos/realtime/clkgen0_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'clkgen0' (1#1) [/home/yanni/DSPDude/demos/tone_generator/tone_generator.runs/synth_1/.Xil/Vivado-22740-asbestos/realtime/clkgen0_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'clkgen0' [/home/yanni/DSPDude/demos/tone_generator/tone_generator.runs/synth_1/.Xil/Vivado-7903-asbestos/realtime/clkgen0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'clkgen0' (1#1) [/home/yanni/DSPDude/demos/tone_generator/tone_generator.runs/synth_1/.Xil/Vivado-7903-asbestos/realtime/clkgen0_stub.v:6]
 INFO: [Synth 8-638] synthesizing module 'slowdivider' [/home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/sources_1/imports/new/slowdivider.v:23]
 	Parameter LOGLENGTH bound to: 7 - type: integer 
 	Parameter COUNTVAL bound to: 64 - type: integer 
@@ -39,11 +39,11 @@ INFO: [Synth 8-638] synthesizing module 'serialcontroller' [/home/yanni/DSPDude/
 	Parameter OUTPUT_STATE bound to: 3'b011 
 INFO: [Synth 8-155] case statement is not full and has no default [/home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/sources_1/imports/new/serialcontroller.v:40]
 INFO: [Synth 8-256] done synthesizing module 'serialcontroller' (5#1) [/home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/sources_1/imports/new/serialcontroller.v:23]
-WARNING: [Synth 8-689] width (1) of port connection 'data' does not match port width (16) of module 'serialcontroller' [/home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/sources_1/imports/new/nexys4.v:41]
+WARNING: [Synth 8-689] width (1) of port connection 'data' does not match port width (16) of module 'serialcontroller' [/home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/sources_1/imports/new/nexys4.v:60]
 INFO: [Synth 8-638] synthesizing module 'akm4396settingscontroller' [/home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/sources_1/imports/new/akm4396.v:23]
-	Parameter CONTROL2_DEFAULT_QUADSPEED bound to: 16'b0010000100011010 
+	Parameter CONTROL2_DEFAULT_QUADSPEED bound to: 16'b0010000110011010 
 	Parameter CONTROL1_MODE3_RSTN_AUTO_SETTING bound to: 16'b0010000010000110 
-	Parameter CONTROL1_MODE3_AUTO_SETTING bound to: 16'b0010000010000111 
+	Parameter CONTROL1_MODE3_AUTO_SETTING bound to: 16'b0010000011000111 
 	Parameter CONTROL3_DEFAULT bound to: 16'b0010001000000000 
 	Parameter LCH_FULL_VOLUME bound to: 16'b0010001111111111 
 	Parameter RCH_FULL_VOLUME bound to: 16'b0010010011111111 
@@ -70,23 +70,32 @@ INFO: [Synth 8-638] synthesizing module 'akm4396settingscontroller' [/home/yanni
 	Parameter CONFIG_RCH_STATE_WAITFOR_DONE_LOW bound to: 21'b001000000000000000000 
 	Parameter CONFIG_RCH_STATE_WAITFOR_DONE_HIGH bound to: 21'b010000000000000000000 
 	Parameter RUNNING_STATE bound to: 21'b100000000000000000000 
-INFO: [Synth 8-155] case statement is not full and has no default [/home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/sources_1/imports/new/akm4396.v:78]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/sources_1/imports/new/akm4396.v:80]
 INFO: [Synth 8-256] done synthesizing module 'akm4396settingscontroller' (6#1) [/home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/sources_1/imports/new/akm4396.v:23]
-WARNING: [Synth 8-689] width (1) of port connection 'data' does not match port width (16) of module 'akm4396settingscontroller' [/home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/sources_1/imports/new/nexys4.v:42]
-INFO: [Synth 8-638] synthesizing module 'i2s_output' [/home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/sources_1/imports/Codec/i2s_output.v:22]
-	Parameter START bound to: 2'b00 
-	Parameter LCH_DATA bound to: 2'b01 
-	Parameter RCH_DATA bound to: 2'b10 
-	Parameter STOP bound to: 2'b11 
-	Parameter DATA_COUNT bound to: 23 - type: integer 
-INFO: [Synth 8-226] default block is never used [/home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/sources_1/imports/Codec/i2s_output.v:46]
-INFO: [Synth 8-256] done synthesizing module 'i2s_output' (7#1) [/home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/sources_1/imports/Codec/i2s_output.v:22]
-WARNING: [Synth 8-3848] Net reset in module/entity nexys4 does not have driver. [/home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/sources_1/imports/new/nexys4.v:42]
-INFO: [Synth 8-256] done synthesizing module 'nexys4' (8#1) [/home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/sources_1/imports/new/nexys4.v:23]
+WARNING: [Synth 8-689] width (1) of port connection 'data' does not match port width (16) of module 'akm4396settingscontroller' [/home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/sources_1/imports/new/nexys4.v:61]
+WARNING: [Synth 8-3848] Net AN in module/entity nexys4 does not have driver. [/home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/sources_1/imports/new/nexys4.v:28]
+INFO: [Synth 8-256] done synthesizing module 'nexys4' (7#1) [/home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/sources_1/imports/new/nexys4.v:23]
 WARNING: [Synth 8-3331] design nexys4 has unconnected port JA[6]
 WARNING: [Synth 8-3331] design nexys4 has unconnected port JA[5]
+WARNING: [Synth 8-3917] design nexys4 has port JA[4] driven by constant 0
+WARNING: [Synth 8-3917] design nexys4 has port SEG[7] driven by constant 1
+WARNING: [Synth 8-3331] design nexys4 has unconnected port SEG[6]
+WARNING: [Synth 8-3331] design nexys4 has unconnected port SEG[5]
+WARNING: [Synth 8-3331] design nexys4 has unconnected port SEG[4]
+WARNING: [Synth 8-3331] design nexys4 has unconnected port SEG[3]
+WARNING: [Synth 8-3331] design nexys4 has unconnected port SEG[2]
+WARNING: [Synth 8-3331] design nexys4 has unconnected port SEG[1]
+WARNING: [Synth 8-3331] design nexys4 has unconnected port SEG[0]
+WARNING: [Synth 8-3331] design nexys4 has unconnected port AN[7]
+WARNING: [Synth 8-3331] design nexys4 has unconnected port AN[6]
+WARNING: [Synth 8-3331] design nexys4 has unconnected port AN[5]
+WARNING: [Synth 8-3331] design nexys4 has unconnected port AN[4]
+WARNING: [Synth 8-3331] design nexys4 has unconnected port AN[3]
+WARNING: [Synth 8-3331] design nexys4 has unconnected port AN[2]
+WARNING: [Synth 8-3331] design nexys4 has unconnected port AN[1]
+WARNING: [Synth 8-3331] design nexys4 has unconnected port AN[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 974.980 ; gain = 175.809 ; free physical = 28322 ; free virtual = 29305
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 974.980 ; gain = 175.809 ; free physical = 29277 ; free virtual = 30426
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -95,18 +104,16 @@ Report Check Netlist:
 +------+------------------+-------+---------+-------+------------------+
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
-WARNING: [Synth 8-3295] tying undriven pin codecfsm:reset to constant 0 [/home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/sources_1/imports/new/nexys4.v:42]
-WARNING: [Synth 8-3295] tying undriven pin noisemaker:reset to constant 0 [/home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/sources_1/imports/new/nexys4.v:43]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 974.980 ; gain = 175.809 ; free physical = 28322 ; free virtual = 29305
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 974.980 ; gain = 175.809 ; free physical = 29277 ; free virtual = 30426
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a100tcsg324-3
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [/home/yanni/DSPDude/demos/tone_generator/tone_generator.runs/synth_1/.Xil/Vivado-22740-asbestos/dcp/clkgen0_in_context.xdc] for cell 'clocks/someclocks'
-Finished Parsing XDC File [/home/yanni/DSPDude/demos/tone_generator/tone_generator.runs/synth_1/.Xil/Vivado-22740-asbestos/dcp/clkgen0_in_context.xdc] for cell 'clocks/someclocks'
+Parsing XDC File [/home/yanni/DSPDude/demos/tone_generator/tone_generator.runs/synth_1/.Xil/Vivado-7903-asbestos/dcp/clkgen0_in_context.xdc] for cell 'clocks/someclocks'
+Finished Parsing XDC File [/home/yanni/DSPDude/demos/tone_generator/tone_generator.runs/synth_1/.Xil/Vivado-7903-asbestos/dcp/clkgen0_in_context.xdc] for cell 'clocks/someclocks'
 Parsing XDC File [/home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc]
 Finished Parsing XDC File [/home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc]
 Completed Processing XDC Constraints
@@ -114,21 +121,21 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 1302.426 ; gain = 0.000 ; free physical = 28045 ; free virtual = 29027
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1301.426 ; gain = 0.000 ; free physical = 29086 ; free virtual = 30235
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1302.426 ; gain = 503.254 ; free physical = 28438 ; free virtual = 29389
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1301.426 ; gain = 502.254 ; free physical = 29085 ; free virtual = 30234
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-3
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1302.426 ; gain = 503.254 ; free physical = 28438 ; free virtual = 29389
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1301.426 ; gain = 502.254 ; free physical = 29085 ; free virtual = 30234
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property IO_BUFFER_TYPE = NONE for CLK100MHZ. (constraint file  /home/yanni/DSPDude/demos/tone_generator/tone_generator.runs/synth_1/.Xil/Vivado-22740-asbestos/dcp/clkgen0_in_context.xdc, line 4).
+Applied set_property IO_BUFFER_TYPE = NONE for CLK100MHZ. (constraint file  /home/yanni/DSPDude/demos/tone_generator/tone_generator.runs/synth_1/.Xil/Vivado-7903-asbestos/dcp/clkgen0_in_context.xdc, line 4).
 incorrect argument "-dict" for "set_property" at line 7 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
 incorrect set of required parameters for "set_property" at line 7 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
 ---------------------------------------------------------------------
@@ -143,6 +150,402 @@ Usage:
 ---------------------------------------------------------------------
 incorrect argument "-dict" for "set_property" at line 13 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
 incorrect set of required parameters for "set_property" at line 13 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 33 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+incorrect set of required parameters for "set_property" at line 33 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 34 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+incorrect set of required parameters for "set_property" at line 34 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 35 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+incorrect set of required parameters for "set_property" at line 35 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 36 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+incorrect set of required parameters for "set_property" at line 36 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 37 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+incorrect set of required parameters for "set_property" at line 37 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 38 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+incorrect set of required parameters for "set_property" at line 38 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 39 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+incorrect set of required parameters for "set_property" at line 39 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 40 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+incorrect set of required parameters for "set_property" at line 40 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 41 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+incorrect set of required parameters for "set_property" at line 41 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 42 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+incorrect set of required parameters for "set_property" at line 42 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 43 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+incorrect set of required parameters for "set_property" at line 43 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 44 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+incorrect set of required parameters for "set_property" at line 44 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 45 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+incorrect set of required parameters for "set_property" at line 45 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 46 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+incorrect set of required parameters for "set_property" at line 46 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 47 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+incorrect set of required parameters for "set_property" at line 47 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 48 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+incorrect set of required parameters for "set_property" at line 48 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 50 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+incorrect set of required parameters for "set_property" at line 50 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 60 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+incorrect set of required parameters for "set_property" at line 60 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 61 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+incorrect set of required parameters for "set_property" at line 61 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 62 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+incorrect set of required parameters for "set_property" at line 62 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 63 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+incorrect set of required parameters for "set_property" at line 63 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 64 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+incorrect set of required parameters for "set_property" at line 64 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 65 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+incorrect set of required parameters for "set_property" at line 65 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 66 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+incorrect set of required parameters for "set_property" at line 66 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 68 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+incorrect set of required parameters for "set_property" at line 68 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 70 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+incorrect set of required parameters for "set_property" at line 70 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 71 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+incorrect set of required parameters for "set_property" at line 71 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 72 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+incorrect set of required parameters for "set_property" at line 72 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 73 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+incorrect set of required parameters for "set_property" at line 73 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 74 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+incorrect set of required parameters for "set_property" at line 74 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 75 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+incorrect set of required parameters for "set_property" at line 75 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 76 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+incorrect set of required parameters for "set_property" at line 76 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 77 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+incorrect set of required parameters for "set_property" at line 77 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -250,7 +653,7 @@ Usage:
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1302.426 ; gain = 503.254 ; free physical = 28438 ; free virtual = 29389
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1301.426 ; gain = 502.254 ; free physical = 29085 ; free virtual = 30234
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "output_reg" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "output_reg" won't be mapped to RAM because it is too sparse
@@ -261,7 +664,7 @@ INFO: [Synth 8-5545] ROM "idle" won't be mapped to RAM because address size (21)
 INFO: [Synth 8-5545] ROM "data" won't be mapped to RAM because address size (21) is larger than maximum supported(18)
 INFO: [Synth 8-5545] ROM "start" won't be mapped to RAM because address size (21) is larger than maximum supported(18)
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1302.426 ; gain = 503.254 ; free physical = 28417 ; free virtual = 29371
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1301.426 ; gain = 502.254 ; free physical = 29064 ; free virtual = 30212
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -278,7 +681,7 @@ Detailed RTL Component Info :
 	   2 Input     10 Bit       Adders := 1     
 	   2 Input      9 Bit       Adders := 1     
 	   2 Input      8 Bit       Adders := 1     
-	   2 Input      5 Bit       Adders := 2     
+	   2 Input      5 Bit       Adders := 1     
 +---Registers : 
 	               21 Bit    Registers := 1     
 	               16 Bit    Registers := 1     
@@ -288,20 +691,17 @@ Detailed RTL Component Info :
 	                8 Bit    Registers := 1     
 	                1 Bit    Registers := 5     
 +---Muxes : 
-	   4 Input     24 Bit        Muxes := 1     
-	   2 Input     24 Bit        Muxes := 2     
 	  22 Input     21 Bit        Muxes := 1     
 	   2 Input     16 Bit        Muxes := 1     
 	   4 Input     16 Bit        Muxes := 1     
 	  22 Input     16 Bit        Muxes := 1     
-	   2 Input      5 Bit        Muxes := 3     
-	   4 Input      5 Bit        Muxes := 2     
+	   2 Input      5 Bit        Muxes := 1     
+	   4 Input      5 Bit        Muxes := 1     
 	  22 Input      5 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 1     
 	   4 Input      4 Bit        Muxes := 1     
-	   6 Input      2 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 5     
-	   4 Input      1 Bit        Muxes := 10    
+	   4 Input      1 Bit        Muxes := 5     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -355,17 +755,6 @@ Detailed RTL Component Info :
 	  22 Input     21 Bit        Muxes := 1     
 	  22 Input     16 Bit        Muxes := 1     
 	  22 Input      5 Bit        Muxes := 1     
-Module i2s_output 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input      5 Bit       Adders := 1     
-+---Muxes : 
-	   4 Input     24 Bit        Muxes := 1     
-	   2 Input     24 Bit        Muxes := 2     
-	   4 Input      5 Bit        Muxes := 1     
-	   2 Input      5 Bit        Muxes := 2     
-	   6 Input      2 Bit        Muxes := 1     
-	   4 Input      1 Bit        Muxes := 5     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -378,24 +767,42 @@ BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1302.426 ; gain = 503.254 ; free physical = 28413 ; free virtual = 29371
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1301.426 ; gain = 502.254 ; free physical = 29064 ; free virtual = 30212
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "lrclkgen/output_reg" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "serialclkgen/output_reg" won't be mapped to RAM because it is too sparse
-WARNING: [Synth 8-3936] Found unconnected internal register 'codecfsm/data_reg' and it is trimmed from '16' to '1' bits. [/home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/sources_1/imports/new/akm4396.v:103]
+WARNING: [Synth 8-3936] Found unconnected internal register 'codecfsm/data_reg' and it is trimmed from '16' to '1' bits. [/home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/sources_1/imports/new/akm4396.v:106]
 INFO: [Synth 8-5546] ROM "clocks/lrclkgen/output_reg" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "clocks/serialclkgen/output_reg" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5545] ROM "codecfsm/count" won't be mapped to RAM because address size (21) is larger than maximum supported(18)
 INFO: [Synth 8-5545] ROM "codecfsm/data" won't be mapped to RAM because address size (21) is larger than maximum supported(18)
 INFO: [Synth 8-5545] ROM "codecfsm/start" won't be mapped to RAM because address size (21) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "codecfsm/idle" won't be mapped to RAM because address size (21) is larger than maximum supported(18)
 WARNING: [Synth 8-3331] design nexys4 has unconnected port JA[6]
 WARNING: [Synth 8-3331] design nexys4 has unconnected port JA[5]
+WARNING: [Synth 8-3917] design nexys4 has port JA[4] driven by constant 0
+WARNING: [Synth 8-3917] design nexys4 has port SEG[7] driven by constant 1
+WARNING: [Synth 8-3331] design nexys4 has unconnected port SEG[6]
+WARNING: [Synth 8-3331] design nexys4 has unconnected port SEG[5]
+WARNING: [Synth 8-3331] design nexys4 has unconnected port SEG[4]
+WARNING: [Synth 8-3331] design nexys4 has unconnected port SEG[3]
+WARNING: [Synth 8-3331] design nexys4 has unconnected port SEG[2]
+WARNING: [Synth 8-3331] design nexys4 has unconnected port SEG[1]
+WARNING: [Synth 8-3331] design nexys4 has unconnected port SEG[0]
+WARNING: [Synth 8-3331] design nexys4 has unconnected port AN[7]
+WARNING: [Synth 8-3331] design nexys4 has unconnected port AN[6]
+WARNING: [Synth 8-3331] design nexys4 has unconnected port AN[5]
+WARNING: [Synth 8-3331] design nexys4 has unconnected port AN[4]
+WARNING: [Synth 8-3331] design nexys4 has unconnected port AN[3]
+WARNING: [Synth 8-3331] design nexys4 has unconnected port AN[2]
+WARNING: [Synth 8-3331] design nexys4 has unconnected port AN[1]
+WARNING: [Synth 8-3331] design nexys4 has unconnected port AN[0]
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1302.426 ; gain = 503.254 ; free physical = 28401 ; free virtual = 29367
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1301.426 ; gain = 502.254 ; free physical = 29066 ; free virtual = 30214
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1302.426 ; gain = 503.254 ; free physical = 28401 ; free virtual = 29367
+Finished Parallel Reinference  : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1301.426 ; gain = 502.254 ; free physical = 29066 ; free virtual = 30214
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -411,40 +818,28 @@ ROM:
 |Module Name | RTL Object | Depth x Width | Implemented As | 
 +------------+------------+---------------+----------------+
 |tonegen     | rom        | 64x24         | LUT            | 
-|nexys4      | rom        | 64x24         | LUT            | 
 +------------+------------+---------------+----------------+
 
 ---------------------------------------------------------------------------------
 Finished ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\noisemaker/shiftreg_reg[0] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\codecbus/curstate_reg[3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\noisemaker/shiftreg_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\noisemaker/shiftreg_reg[2] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\noisemaker/shiftreg_reg[3] )
 WARNING: [Synth 8-3332] Sequential element (\codecbus/curstate_reg[3] ) is unused and will be removed from module nexys4.
 WARNING: [Synth 8-3332] Sequential element (\codecbus/curstate_reg[2] ) is unused and will be removed from module nexys4.
-WARNING: [Synth 8-3332] Sequential element (\noisemaker/shiftreg_reg[3] ) is unused and will be removed from module nexys4.
-WARNING: [Synth 8-3332] Sequential element (\noisemaker/shiftreg_reg[2] ) is unused and will be removed from module nexys4.
-WARNING: [Synth 8-3332] Sequential element (\noisemaker/shiftreg_reg[1] ) is unused and will be removed from module nexys4.
-WARNING: [Synth 8-3332] Sequential element (\noisemaker/shiftreg_reg[0] ) is unused and will be removed from module nexys4.
-WARNING: [Synth 8-3332] Sequential element (\tone/index_reg[8] ) is unused and will be removed from module nexys4.
-WARNING: [Synth 8-3332] Sequential element (\tone/index_reg[7] ) is unused and will be removed from module nexys4.
-WARNING: [Synth 8-3332] Sequential element (\tone/index_reg[6] ) is unused and will be removed from module nexys4.
 ---------------------------------------------------------------------------------
 Start Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1302.426 ; gain = 503.254 ; free physical = 28397 ; free virtual = 29365
+Finished Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1301.426 ; gain = 502.254 ; free physical = 29058 ; free virtual = 30207
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1302.426 ; gain = 503.254 ; free physical = 28397 ; free virtual = 29365
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1301.426 ; gain = 502.254 ; free physical = 29058 ; free virtual = 30207
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1302.426 ; gain = 503.254 ; free physical = 28397 ; free virtual = 29365
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1301.426 ; gain = 502.254 ; free physical = 29058 ; free virtual = 30207
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
@@ -465,6 +860,402 @@ Usage:
 ---------------------------------------------------------------------
 incorrect argument "-dict" for "set_property" at line 13 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
 incorrect set of required parameters for "set_property" at line 13 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 33 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+incorrect set of required parameters for "set_property" at line 33 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 34 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+incorrect set of required parameters for "set_property" at line 34 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 35 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+incorrect set of required parameters for "set_property" at line 35 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 36 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+incorrect set of required parameters for "set_property" at line 36 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 37 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+incorrect set of required parameters for "set_property" at line 37 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 38 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+incorrect set of required parameters for "set_property" at line 38 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 39 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+incorrect set of required parameters for "set_property" at line 39 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 40 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+incorrect set of required parameters for "set_property" at line 40 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 41 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+incorrect set of required parameters for "set_property" at line 41 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 42 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+incorrect set of required parameters for "set_property" at line 42 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 43 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+incorrect set of required parameters for "set_property" at line 43 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 44 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+incorrect set of required parameters for "set_property" at line 44 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 45 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+incorrect set of required parameters for "set_property" at line 45 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 46 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+incorrect set of required parameters for "set_property" at line 46 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 47 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+incorrect set of required parameters for "set_property" at line 47 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 48 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+incorrect set of required parameters for "set_property" at line 48 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 50 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+incorrect set of required parameters for "set_property" at line 50 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 60 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+incorrect set of required parameters for "set_property" at line 60 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 61 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+incorrect set of required parameters for "set_property" at line 61 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 62 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+incorrect set of required parameters for "set_property" at line 62 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 63 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+incorrect set of required parameters for "set_property" at line 63 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 64 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+incorrect set of required parameters for "set_property" at line 64 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 65 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+incorrect set of required parameters for "set_property" at line 65 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 66 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+incorrect set of required parameters for "set_property" at line 66 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 68 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+incorrect set of required parameters for "set_property" at line 68 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 70 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+incorrect set of required parameters for "set_property" at line 70 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 71 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+incorrect set of required parameters for "set_property" at line 71 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 72 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+incorrect set of required parameters for "set_property" at line 72 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 73 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+incorrect set of required parameters for "set_property" at line 73 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 74 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+incorrect set of required parameters for "set_property" at line 74 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 75 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+incorrect set of required parameters for "set_property" at line 75 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 76 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+incorrect set of required parameters for "set_property" at line 76 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 77 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+incorrect set of required parameters for "set_property" at line 77 of file /home/yanni/DSPDude/demos/tone_generator/tone_generator.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -573,10 +1364,10 @@ Usage:
 ---------------------------------------------------------------------
 INFO: Moved 2 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1302.426 ; gain = 503.254 ; free physical = 28287 ; free virtual = 29266
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1301.426 ; gain = 502.254 ; free physical = 29027 ; free virtual = 30176
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1302.426 ; gain = 503.254 ; free physical = 28287 ; free virtual = 29266
+Finished Timing Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1301.426 ; gain = 502.254 ; free physical = 29027 ; free virtual = 30176
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -588,7 +1379,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1302.426 ; gain = 503.254 ; free physical = 28287 ; free virtual = 29266
+Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1301.426 ; gain = 502.254 ; free physical = 29010 ; free virtual = 30158
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -606,7 +1397,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1302.426 ; gain = 503.254 ; free physical = 28287 ; free virtual = 29266
+Finished IO Insertion : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1301.426 ; gain = 502.254 ; free physical = 29010 ; free virtual = 30158
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -619,7 +1410,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1302.426 ; gain = 503.254 ; free physical = 28287 ; free virtual = 29266
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1301.426 ; gain = 502.254 ; free physical = 29010 ; free virtual = 30158
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -631,13 +1422,13 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1302.426 ; gain = 503.254 ; free physical = 28287 ; free virtual = 29266
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1301.426 ; gain = 502.254 ; free physical = 29010 ; free virtual = 30158
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Start Renaming Generated Ports : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1302.426 ; gain = 503.254 ; free physical = 28287 ; free virtual = 29266
+Start Renaming Generated Ports : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1301.426 ; gain = 502.254 ; free physical = 29010 ; free virtual = 30158
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1302.426 ; gain = 503.254 ; free physical = 28287 ; free virtual = 29266
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1301.426 ; gain = 502.254 ; free physical = 29010 ; free virtual = 30158
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -656,48 +1447,47 @@ Report Cell Usage:
 +------+--------+------+
 |1     |clkgen0 |     1|
 |2     |CARRY4  |     3|
-|3     |LUT1    |    16|
-|4     |LUT2    |    21|
-|5     |LUT3    |    14|
-|6     |LUT4    |    38|
-|7     |LUT5    |    18|
-|8     |LUT6    |    51|
-|9     |FDRE    |   115|
-|10    |IBUF    |     1|
-|11    |OBUF    |     8|
-|12    |OBUFT   |     2|
+|3     |LUT1    |    14|
+|4     |LUT2    |    23|
+|5     |LUT3    |     8|
+|6     |LUT4    |    16|
+|7     |LUT5    |    12|
+|8     |LUT6    |    25|
+|9     |FDRE    |    80|
+|10    |FDSE    |     1|
+|11    |IBUF    |     1|
+|12    |OBUF    |    26|
+|13    |OBUFT   |    17|
 +------+--------+------+
 
 Report Instance Areas: 
 +------+-----------------+----------------------------+------+
 |      |Instance         |Module                      |Cells |
 +------+-----------------+----------------------------+------+
-|1     |top              |                            |   289|
+|1     |top              |                            |   228|
 |2     |  clocks         |clockmaker                  |    67|
 |3     |    lrclkgen     |slowdivider                 |    21|
 |4     |    serialclkgen |slowdivider__parameterized0 |    44|
 |5     |  codecbus       |serialcontroller            |    39|
-|6     |  codecfsm       |akm4396settingscontroller   |    76|
-|7     |  noisemaker     |i2s_output                  |    64|
-|8     |  tone           |tonegen                     |    32|
+|6     |  codecfsm       |akm4396settingscontroller   |    78|
 +------+-----------------+----------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1302.426 ; gain = 503.254 ; free physical = 28287 ; free virtual = 29266
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1301.426 ; gain = 502.254 ; free physical = 29010 ; free virtual = 30158
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 12 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1302.426 ; gain = 59.285 ; free physical = 28287 ; free virtual = 29266
-Synthesis Optimization Complete : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1302.426 ; gain = 503.254 ; free physical = 28287 ; free virtual = 29266
+Synthesis finished with 0 errors, 0 critical warnings and 22 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1301.426 ; gain = 59.285 ; free physical = 29001 ; free virtual = 30150
+Synthesis Optimization Complete : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1301.426 ; gain = 502.254 ; free physical = 29001 ; free virtual = 30150
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
-INFO: [Opt 31-138] Pushed 2 inverter(s) to 53 load pin(s).
+INFO: [Opt 31-138] Pushed 1 inverter(s) to 24 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-52 Infos, 19 Warnings, 0 Critical Warnings and 0 Errors encountered.
+46 Infos, 44 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1302.426 ; gain = 394.734 ; free physical = 28287 ; free virtual = 29266
-report_utilization: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.04 . Memory (MB): peak = 1334.445 ; gain = 0.000 ; free physical = 28285 ; free virtual = 29264
-INFO: [Common 17-206] Exiting Vivado at Wed Nov  4 00:06:38 2015...
+synth_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1301.426 ; gain = 393.734 ; free physical = 29001 ; free virtual = 30149
+report_utilization: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.03 . Memory (MB): peak = 1333.445 ; gain = 0.000 ; free physical = 28999 ; free virtual = 30148
+INFO: [Common 17-206] Exiting Vivado at Wed Nov  4 02:30:53 2015...

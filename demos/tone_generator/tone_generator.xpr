@@ -43,15 +43,6 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/Codec/i2s_output.v">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../modules/akm4396/i2s/i2s.srcs/sources_1/imports/Codec/i2s_output.v"/>
-          <Attr Name="ImportTime" Val="1446609558"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PSRCDIR/sources_1/imports/new/akm4396.v">
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../../modules/akm4396/settingscontroller/settingscontroller.srcs/sources_1/new/akm4396.v"/>
@@ -74,6 +65,26 @@
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../../modules/clockgen/clockgen.srcs/sources_1/new/nexys4.v"/>
           <Attr Name="ImportTime" Val="1446323575"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Codec/i2s_output.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../modules/akm4396/i2s/i2s.srcs/sources_1/imports/Codec/i2s_output.v"/>
+          <Attr Name="ImportTime" Val="1446609558"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/porsche_alarm/display_8hex.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../fpga/porsche_alarm/display_8hex.v"/>
+          <Attr Name="ImportTime" Val="1444599263"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
