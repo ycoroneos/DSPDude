@@ -1,0 +1,4 @@
+Running: xsim.dir/i2s_receiver_tb_behav/xsimk.exe -simmode gui -wdb i2s_receiver_tb_behav.wdb -simrunnum 0 -socket 57409
+Design successfully loaded
+Design Loading Memory Usage: 23956 KB (Peak: 23956 KB)
+Design Loading CPU Usage: 202 ms
