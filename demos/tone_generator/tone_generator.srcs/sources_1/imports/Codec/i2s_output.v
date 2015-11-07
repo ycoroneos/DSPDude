@@ -43,10 +43,17 @@ module i2s_output(
    
     
     always @(negedge bick) begin
+        if (reset)
+            begin
+            state<=START;
+            shiftreg <= 0;
+            end
+        else
+        begin
         case (state) 
             START: begin
             // initialize registers and wait for start assertion
-                if (start) begin  
+                if (~start) begin  
                     stop <= 0;          
                     count <= 0;
                     shiftreg <= data_left;
@@ -82,8 +89,11 @@ module i2s_output(
             // if right data hasn't been loaded wait for rising edge of lrck
                 if (!stop & lrck)
                     state <= RCH_DATA;
+                else if (stop)
+                    state <= START;
                 end
             default: state <= START;
-            endcase  
+            endcase
+            end  
         end            
 endmodule

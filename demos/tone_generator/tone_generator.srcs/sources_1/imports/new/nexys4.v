@@ -44,8 +44,8 @@ output LED16_B
     
     
     wire akm_mclk, akm_lrclk, akm_bclk, serial_clk;
-    wire codecwritedata, codec_cs, codec_dataline, PDN, start, codecidle, codec_sdata;
-    assign codec_sdata=0;
+    wire codecwritedata, codec_cs, codec_dataline, PDN, start, codecidle, codec_sdata, i2sdone;
+    //assign codec_sdata=0;
     assign JA[1]=akm_mclk;
     assign JA[10]=akm_lrclk;
     assign JA[3]=akm_bclk;
@@ -57,8 +57,8 @@ output LED16_B
     assign JA[7] = codec_dataline;
     wire [23:0] sound;
     tonegen tone(.clock(akm_mclk), .ready(akm_lrclk), .pcm_data(sound));
-    serialcontroller codecbus(.serialclk(serial_clk), .data(codecwritedata), .cs(codec_cs), .shiftout(codec_dataline), .start(start));
-    akm4396settingscontroller codecfsm(.clk100mhz(akm_mclk), .reset(RESET), .done(codec_cs), .data(codecwritedata), .start(start), .PDN(PDN), .idle(codecidle), .statedisplay(statedisplay));
-    //i2s_output noisemaker(.reset(RESET), .bick(akm_bclk), .lrck(akm_lrclk), .data_left(sound), .data_right(sound), .start(akm_lrclk), .stop(i2sdone), .sdata(codec_sdata));
+    //serialcontroller codecbus(.serialclk(serial_clk), .data(codecwritedata), .cs(codec_cs), .shiftout(codec_dataline), .start(start));
+    //akm4396settingscontroller codecfsm(.clk100mhz(akm_mclk), .reset(RESET), .done(codec_cs), .data(codecwritedata), .start(start), .PDN(PDN), .idle(codecidle), .statedisplay(statedisplay));
+    i2s_output noisemaker(.reset(RESET), .bick(akm_bclk), .lrck(akm_lrclk), .data_left(sound), .data_right(sound), .start(akm_lrclk), .stop(i2sdone), .sdata(codec_sdata));
     
 endmodule
