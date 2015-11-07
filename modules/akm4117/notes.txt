@@ -1,0 +1,18 @@
+Ak4117 receives SPDIF on RX0/1 pins [5/3]
+
+Outputs:
+  LRCK[10] max is 192kHz
+  BICK[11] typ is 64fs
+  SDTO[12]
+  MCKO[14] max is 24.576MHz, can be an external clock
+  UOUT[16]
+  CDTO[17] control data out pin
+  INT0/1[21/2] interrupts
+  
+pg. 10 CM0/1 set MCKO mode (PLL or XTAL mode)
+pg. 11 set MCKO frequency xxfs
+  PCKS[1:0] = 2 : fs=192kHz
+  XCKS0/1[1:0] = 0 : fs = 192kHz
+pg. 21 DIF2-0 set Audio data format 
+  Mode 5 I2S
+  
