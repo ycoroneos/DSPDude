@@ -82,6 +82,8 @@ module i2s_output(
             // if right data hasn't been loaded wait for rising edge of lrck
                 if (!stop & lrck)
                     state <= RCH_DATA;
+                else if (stop)
+                    state <= START;
                 end
             default: state <= START;
             endcase  

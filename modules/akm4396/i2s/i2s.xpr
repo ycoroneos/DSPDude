@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="5" Path="C:/Users/Valentina/Documents/School/6.111/Final Project/i2s/i2s.xpr">
+<Project Version="7" Minor="5" Path="C:/Users/Valentina/Documents/School/6.111/Final Project/DSPDude/modules/akm4396/i2s/i2s.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="e7727b30c74841bcb1c7ba4a3040f629"/>
@@ -20,7 +20,7 @@
       <Filter Type="Srcs"/>
       <File Path="$PSRCDIR/sources_1/imports/Codec/i2s_output.v">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../Codec/i2s_output.v"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../Codec/i2s_output.v"/>
           <Attr Name="ImportTime" Val="1446353403"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -43,7 +43,7 @@
       <Filter Type="Srcs"/>
       <File Path="$PSRCDIR/sim_1/imports/Codec/i2s_output_tb.v">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../Codec/i2s_output_tb.v"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../Codec/i2s_output_tb.v"/>
           <Attr Name="ImportTime" Val="1446357634"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
