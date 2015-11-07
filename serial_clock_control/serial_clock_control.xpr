@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="5" Path="/home/yanni/DSPDude/serial_clock_control/serial_clock_control.xpr">
+<Project Version="7" Minor="5" Path="C:/Users/Valentina/Documents/School/6.111/Final Project/DSPDude/serial_clock_control/serial_clock_control.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="60c0d9d28d3f4365bcbf41e2124c51ed"/>
@@ -92,6 +92,9 @@
     </Simulator>
     <Simulator Name="Riviera">
       <Option Name="Description" Val="Riviera-PRO Simulator"/>
+    </Simulator>
+    <Simulator Name="ActiveHDL">
+      <Option Name="Description" Val="Active-HDL Simulator"/>
     </Simulator>
   </Simulators>
   <Runs Version="1" Minor="9">
