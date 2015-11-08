@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.2 (lin64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-| Date         : Sat Nov  7 17:48:03 2015
+| Date         : Sat Nov  7 22:44:27 2015
 | Host         : asbestos running 64-bit Gentoo Base System release 2.2
 | Command      : report_io -file nexys4_io_placed.rpt
 | Design       : nexys4
@@ -23,7 +23,7 @@ Table of Contents
 +---------------+
 | Total User IO |
 +---------------+
-|            45 |
+|            46 |
 +---------------+
 
 
@@ -228,7 +228,7 @@ Table of Contents
 | L13        |             | High Range | IO_L6P_T0_FCS_B_14           | User IO     |             |      14 |            |      |                     |                      |         |            |           |      |                  |
 | L14        |             | High Range | IO_L2P_T0_D02_14             | User IO     |             |      14 |            |      |                     |                      |         |            |           |      |                  |
 | L15        |             | High Range | IO_L3P_T0_DQS_PUDC_B_14      | User IO     |             |      14 |            |      |                     |                      |         |            |           |      |                  |
-| L16        |             | High Range | IO_L3N_T0_DQS_EMCCLK_14      | User IO     |             |      14 |            |      |                     |                      |         |            |           |      |                  |
+| L16        | MUTE        | High Range | IO_L3N_T0_DQS_EMCCLK_14      | INPUT       | LVCMOS33    |      14 |            |      |                     |                 NONE |         | FIXED      |           |      | NONE             |
 | L17        |             | High Range | VCCO_14                      | VCCO        |             |      14 |            |      |                     |                      |    3.30 |            |           |      |                  |
 | L18        | SEG[6]      | High Range | IO_L4P_T0_D04_14             | OUTPUT      | LVCMOS33    |      14 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |      | NONE             |
 | M1         |             | High Range | IO_L1N_T0_34                 | User IO     |             |      34 |            |      |                     |                      |         |            |           |      |                  |

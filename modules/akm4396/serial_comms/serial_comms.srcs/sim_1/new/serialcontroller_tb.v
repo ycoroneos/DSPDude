@@ -33,6 +33,7 @@ module serialcontroller_tb(
         // Outputs
         wire cs;
         wire shiftout;
+        wire outclk;
     
         // Instantiate the Unit Under Test (UUT)
         serialcontroller uut (
@@ -40,7 +41,8 @@ module serialcontroller_tb(
             .start(start), 
             .data(data),
             .cs(cs),
-            .shiftout(shiftout)
+            .shiftout(shiftout),
+            .outclk(outclk)
         );
     
         always #10 serialclk = !serialclk;

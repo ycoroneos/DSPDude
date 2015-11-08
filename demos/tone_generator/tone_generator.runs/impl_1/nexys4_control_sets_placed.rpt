@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.2 (lin64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-| Date         : Sat Nov  7 17:48:03 2015
+| Date         : Sat Nov  7 22:44:27 2015
 | Host         : asbestos running 64-bit Gentoo Base System release 2.2
 | Command      : report_control_sets -verbose -file nexys4_control_sets_placed.rpt
 | Design       : nexys4
@@ -22,8 +22,8 @@ Table of Contents
 +-------------------------------------------------------------------+-------+
 |                               Status                              | Count |
 +-------------------------------------------------------------------+-------+
-| Number of unique control sets                                     |     5 |
-| Minimum Number of register sites lost to control set restrictions |    15 |
+| Number of unique control sets                                     |     8 |
+| Minimum Number of register sites lost to control set restrictions |    29 |
 +-------------------------------------------------------------------+-------+
 
 
@@ -33,12 +33,12 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              26 |            7 |
+| No           | No                    | No                     |              60 |           22 |
 | No           | No                    | Yes                    |               0 |            0 |
 | No           | Yes                   | No                     |               0 |            0 |
 | Yes          | No                    | No                     |              11 |            6 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |              20 |            6 |
+| Yes          | Yes                   | No                     |              36 |           10 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
@@ -48,11 +48,14 @@ Table of Contents
 +------------------------------+---------------------------------+------------------+------------------+----------------+
 |         Clock Signal         |          Enable Signal          | Set/Reset Signal | Slice Load Count | Bel Load Count |
 +------------------------------+---------------------------------+------------------+------------------+----------------+
+| ~clocks/serialclkgen/CLK     |                                 |                  |                2 |              3 |
 | ~clocks/someclocks/inst/bclk |                                 |                  |                2 |              4 |
 | ~clocks/someclocks/inst/bclk | noisemaker/count[4]_i_1__0_n_0  |                  |                2 |              5 |
 |  clocks/someclocks/inst/mclk | clocks/lrclkgen/JA_OBUF[0]      |                  |                4 |              6 |
-| ~clocks/someclocks/inst/bclk | noisemaker/shiftreg[23]_i_1_n_0 | RESET_IBUF       |                6 |             20 |
-|  clocks/someclocks/inst/mclk |                                 |                  |                5 |             22 |
+|  clocks/fsmclkgen/fsm_clk    |                                 |                  |                3 |              9 |
+| ~clocks/serialclkgen/CLK     | codecbus/shiftreg[15]_i_1_n_0   | RESET_IBUF       |                3 |             16 |
+| ~clocks/someclocks/inst/bclk | noisemaker/shiftreg[23]_i_1_n_0 | MUTE_IBUF        |                7 |             20 |
+|  clocks/someclocks/inst/mclk |                                 |                  |               15 |             44 |
 +------------------------------+---------------------------------+------------------+------------------+----------------+
 
 

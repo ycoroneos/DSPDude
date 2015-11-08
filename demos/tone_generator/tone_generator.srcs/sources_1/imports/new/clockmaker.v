@@ -26,9 +26,10 @@
 
 module clockmaker(
 input wire clk100mhz, reset,
-output wire akm_mclk, akm_lrclk, akm_bclk, serial_clk
+output wire akm_mclk, akm_lrclk, akm_bclk, serial_clk, fsm_clk
     );
     clkgen0 someclocks(.clk_100mhz(clk100mhz), .mclk(akm_mclk), .bclk(akm_bclk), .reset(reset)); //akm_mclk is exactly 24.5760mhz, bclk is exactly 12.2880MHz
     slowdivider #(.LOGLENGTH(7), .COUNTVAL(64)) lrclkgen(.inclk(akm_mclk), .reset(reset), .newclk(akm_lrclk)); //lrclk is exactly 192KHz
     slowdivider #(.LOGLENGTH(11), .COUNTVAL(1280)) serialclkgen(.inclk(akm_mclk), .reset(reset), .newclk(serial_clk)); //serial_clk is exactly 9.6KHz
+    slowdivider #(.LOGLENGTH(20), .COUNTVAL(245760)) fsmclkgen(.inclk(akm_mclk), .reset(reset), .newclk(fsm_clk)); //fsm_clk 1khz
 endmodule
