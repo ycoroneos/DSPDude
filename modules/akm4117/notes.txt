@@ -1,4 +1,5 @@
 Ak4117 receives SPDIF on RX0/1 pins [5/3]
+Operating voltage 3.3V
 
 Outputs:
   LRCK[10] max is 192kHz
@@ -8,11 +9,21 @@ Outputs:
   UOUT[16]
   CDTO[17] control data out pin
   INT0/1[21/2] interrupts
+
+pg.10 set MCKO source (PLL or XTAL)
+  CM[1:0] = 0 : PLL
+  XTL[1:0] = 3 : find sampling frequency using FS[3:0] channel data 
+    read on address 06H byte 3 = FS[3:0] = E, fs = 192kHz)
+  Connect XTI to gnd
   
-pg. 10 CM0/1 set MCKO mode (PLL or XTAL mode)
-pg. 11 set MCKO frequency xxfs
-  PCKS[1:0] = 2 : fs=192kHz
-  XCKS0/1[1:0] = 0 : fs = 192kHz
-pg. 21 DIF2-0 set Audio data format 
-  Mode 5 I2S
+pg.11 set MCKO frequency xxfs
+  PCKS[1:0] = 2 : fs = 192kHz
+  LP = 0 : low power mode needs to be off for 192kHz
   
+pg.17 interrupt pins (decoding and PLL errors)
+
+pg.21 set Audio data format 
+  DIF[2:0] = 5 : I2S mode
+  Format control address 02H
+
+pg.34 wiring diagram
