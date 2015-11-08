@@ -44,10 +44,17 @@ module i2s_receiver(
    
     
     always @(negedge bick) begin
+        if (reset)
+               begin
+               state <= START;
+               shiftreg_l <= 0;
+               end
+        else
+        begin
         case (state) 
             START: begin
             // initialize registers and wait for start assertion
-                if (start) begin  
+                if (~start) begin  
                     stop <= 0;          
                     count <= 0;
                     shiftreg_l <= 24'b0;
@@ -88,5 +95,6 @@ module i2s_receiver(
                 end
             default: state <= START;
             endcase  
-        end            
+            end 
+        end       
 endmodule

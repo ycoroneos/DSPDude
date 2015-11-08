@@ -52,19 +52,19 @@ module i2s_receiver_tb(
         reset = 0;
         bick = 0;
         lrck = 0;
-        start = 0;
+        start = 1;
         sdto = 0;
         
         #100;
-        start=1;
+        start=0;
         sdto=1;
         #20;
-        start=0;
-        #100;
         start=1;
+        #100;
+        start=0;
         sdto=0;
         #20;
-        start=0;
+        start=1;
         sdto=1;
         #20;
         sdto=0;
