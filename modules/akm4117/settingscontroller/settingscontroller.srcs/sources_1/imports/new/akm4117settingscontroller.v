@@ -33,8 +33,10 @@ module akm4117settingscontroller(
     parameter CONTROL0_CLOCK_SOURCE =       16'b0010000000001111;   // select PLL as master clock source
     parameter CONTROL1_CLOCK_FREQ =         16'b0010000101000000;   // select master clk for PLL mode, fs = 192kHz
     parameter CONTROL2_FORMAT_SETTING =     16'b0010001000001101;   // select I2S as comm format and channel 1 for fs
+    parameter CONTROL3_INT_0 =              16'b0010001111111111;   // enable all the interrupts on INT0
+   
 
-    reg [3:0] state = 0; 
+    reg [4:0] state = 0; 
     
     always @(posedge fsmclk)
         begin
@@ -85,7 +87,18 @@ module akm4117settingscontroller(
                 spistart <= 1;
                 state <= state + 1;
                 end
-            7:
+            7: 
+                begin
+                spistart <= 0;
+                state <= state + 1;
+                end
+            8:
+                begin
+                data <= CONTROL3_INT_0;
+                spistart <= 1;
+                state <= state + 1;
+                end
+            9:
                 begin
                 spistart <= 0;
                 idle <= 1;
