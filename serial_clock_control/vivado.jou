@@ -1,0 +1,11 @@
+#-----------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Sat Nov 07 17:12:16 2015
+# Process ID: 7584
+# Log file: C:/Users/Valentina/Documents/School/6.111/Final Project/DSPDude/serial_clock_control/vivado.log
+# Journal file: C:/Users/Valentina/Documents/School/6.111/Final Project/DSPDude/serial_clock_control\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/Valentina/Documents/School/6.111/Final Project/DSPDude/serial_clock_control/serial_clock_control.xpr}

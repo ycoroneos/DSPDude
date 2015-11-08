@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Sun Nov 08 00:08:58 2015
+# Process ID: 9204
+# Log file: C:/Users/Valentina/Documents/School/6.111/Final Project/DSPDude/modules/akm4117/settingscontroller/settingscontroller.runs/synth_1/akm4117settingscontroller.vds
+# Journal file: C:/Users/Valentina/Documents/School/6.111/Final Project/DSPDude/modules/akm4117/settingscontroller/settingscontroller.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source akm4117settingscontroller.tcl -notrace

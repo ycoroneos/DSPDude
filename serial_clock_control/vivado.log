@@ -1,0 +1,20 @@
+#-----------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Sat Nov 07 17:12:16 2015
+# Process ID: 7584
+# Log file: C:/Users/Valentina/Documents/School/6.111/Final Project/DSPDude/serial_clock_control/vivado.log
+# Journal file: C:/Users/Valentina/Documents/School/6.111/Final Project/DSPDude/serial_clock_control\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/Valentina/Documents/School/6.111/Final Project/DSPDude/serial_clock_control/serial_clock_control.xpr}
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'C:/Users/Valentina/Documents/School/6.111/Final Project/DSPDude/serial_clock_control'
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2015.2/data/ip'.
+exit
+INFO: [Common 17-206] Exiting Vivado at Sat Nov 07 17:25:31 2015...
