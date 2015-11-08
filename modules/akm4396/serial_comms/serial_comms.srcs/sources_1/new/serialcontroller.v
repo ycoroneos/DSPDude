@@ -24,6 +24,7 @@ module serialcontroller(
 input wire serialclk, start,
 input wire [15:0] data,
 output reg cs=1,
+output reg outclk=1,
 output wire shiftout
     );
     parameter DATACOUNT=16;
@@ -34,6 +35,14 @@ output wire shiftout
     reg [4:0] count=0;
     reg [15:0] shiftreg=16'h0000;
     assign shiftout=shiftreg[15]; //msb first
+    
+    always @*
+    begin
+        if (curstate!=WAITFOR_START_STATE)
+            outclk=serialclk;
+        else
+            outclk=1;
+    end
     
     always @(negedge serialclk)
     begin
@@ -58,7 +67,9 @@ output wire shiftout
             OUTPUT_STATE:
                 begin
                 count<=count+1;
-                if (count>=(DATACOUNT-2))
+                //if (count>=(DATACOUNT-2))
+                //    curstate<=RESET_STATE;
+                if (shiftreg[14:0]=={{15{0'b0}}})
                     curstate<=RESET_STATE;
                 shiftreg<={shiftreg[14:0],1'b0};
                 end
